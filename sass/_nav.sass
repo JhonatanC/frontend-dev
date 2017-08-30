@@ -1,0 +1,54 @@
+header
+	background: #333333
+	width: 100%
+
+#menu
+	display: flex
+	justify-content: space-between
+
+#menu ul
+	display: flex
+	flex-wrap: wrap
+
+#menu li
+	display: flex
+	&:hover
+		background: #191919
+		border-bottom: 2px solid yellow
+
+#menu a
+	color: #fff
+	display: block
+	padding: 0.8em 0.5em
+	text-decoration: none
+
+
+@media (min-width: 641px)
+	#nav-mobile
+		display: none
+
+
+@media (max-width: 640px)
+	header
+		background: #f1f1f1
+	#menu
+		//display: none
+		background: #333333
+		display: block
+		position: absolute
+		left: 0
+		width: 100%
+		ul,
+		li
+			justify-content: center
+			width: 100%
+	#nav-mobile
+		a
+			display: block
+			padding: 1.2em 0.5em
+			i
+				position: absolute
+				right: 15px
+				top: 10px
+				font-size: 1.3em
+				color: #333333
