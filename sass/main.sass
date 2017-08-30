@@ -1,0 +1,41 @@
+// Títulos
+$font-title : 'Roboto Slab', serif
+$color-title : #333333
+
+// Párrafos
+$font-paragraph : 'Open Sans', sans-serif
+$color-paragraph : #4f4f4f
+
+*
+	border: 0
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	-webkit-box-sizing: border-box
+html, body
+	color: $color-paragraph
+	font-family: $font-paragraph
+	font-size: 100%
+	height: 100%
+	width: 100%
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	color: $color-title
+	font-family: $font-title
+ol,
+ul
+	list-style: none
+img,
+video,
+iframe
+	max-width: 100%
+
+audio
+	border: 1px solid green
+
+@import _grid
+@import _form

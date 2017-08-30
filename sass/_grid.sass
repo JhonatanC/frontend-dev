@@ -1,0 +1,177 @@
+// Variables tamaños
+$size-1 : 8.333333333333333%
+$size-2 : 16.66666666666667%
+$size-3 : 25%
+$size-4 : 33.33333333333333%
+$size-5 : 41.66666666666667%
+$size-6 : 50%
+$size-7 : 58.33333333333333%
+$size-8 : 66.66666666666666%
+$size-9 : 75%
+$size-10 : 83.33333333333333%
+$size-11 : 91.66666666666666%
+$size-12 : 100%
+
+/*
+ * Contenedor
+ */
+.container
+	margin: 0 auto
+	width: 75%
+
+.row
+	display: flex
+	flex-wrap: wrap
+	position: relative
+	width: 100%
+
+/*
+ * Alinear elementos horizontales
+ */
+.justify-cont-start
+	justify-content: flex-start
+.justify-cont-end
+	justify-content: flex-end
+.justify-cont-center
+	justify-content: center
+.justify-cont-between
+	justify-content: space-between
+.justify-cont-around
+	justify-content: space-around
+
+/*
+ * Equipos en adelante
+ */
+@media (min-width: 1024px)
+	.container
+		width: 75%
+		.row
+			.lg-1
+				width: $size-1
+				padding: 0.5em
+			.lg-2
+				width: $size-2
+				padding: 0.5em
+			.lg-3
+				width: $size-3
+				padding: 0.5em
+			.lg-4
+				width: $size-4
+				padding: 0.5em
+			.lg-5
+				width: $size-5
+				padding: 0.5em
+			.lg-6
+				width: $size-6
+				padding: 0.5em
+			.lg-7
+				width: $size-7
+				padding: 0.5em
+			.lg-8
+				width: $size-8
+				padding: 0.5em
+			.lg-9
+				width: $size-9
+				padding: 0.5em
+			.lg-10
+				width: $size-10
+				padding: 0.5em
+			.lg-11
+				width: $size-11
+				padding: 0.5em
+			.lg-12
+				width: $size-12
+				padding: 0.5em
+			.lg-push-1
+				margin-left: $size-1
+			.lg-push-2
+				margin-left: $size-2
+			.lg-push-3
+				margin-left: $size-3
+
+/*
+ * Tablets
+ */
+@media (min-width: 769px) and (max-width: 1023px)
+	.container
+		width: 95%
+		.row
+			.md-1
+				width: $size-1
+				padding: 0.5em
+			.md-2
+				width: $size-2
+				padding: 0.5em
+			.md-3
+				width: $size-3
+				padding: 0.5em
+			.md-4
+				width: $size-4
+				padding: 0.5em
+			.md-5
+				width: $size-5
+				padding: 0.5em
+			.md-6
+				width: $size-6
+				padding: 0.5em
+			.md-7
+				width: $size-7
+				padding: 0.5em
+			.md-8
+				width: $size-8
+				padding: 0.5em
+			.md-9
+				width: $size-9
+				padding: 0.5em
+			.md-10
+				width: $size-10
+				padding: 0.5em
+			.md-11
+				width: $size-11
+				padding: 0.5em
+			.md-12
+				width: $size-12
+				padding: 0.5em
+/*
+ * Smartphone
+ */
+@media (min-width: 320px) and (max-width: 768px)
+	.container
+		width: 95%
+		.row
+			.sm-1
+				width: $size-1
+				padding: 0.5em
+			.sm-2
+				width: $size-2
+				padding: 0.5em
+			.sm-3
+				width: $size-3
+				padding: 0.5em
+			.sm-4
+				width: $size-4
+				padding: 0.5em
+			.sm-5
+				width: $size-5
+				padding: 0.5em
+			.sm-6
+				width: $size-6
+				padding: 0.5em
+			.sm-7
+				width: $size-7
+				padding: 0.5em
+			.sm-8
+				width: $size-8
+				padding: 0.5em
+			.sm-9
+				width: $size-9
+				padding: 0.5em
+			.sm-10
+				width: $size-10
+				padding: 0.5em
+			.sm-11
+				width: $size-11
+				padding: 0.5em
+			.sm-12
+				width: $size-12
+				padding: 0.5em
