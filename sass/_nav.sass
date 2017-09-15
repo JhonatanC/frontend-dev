@@ -1,54 +1,49 @@
 header
-	background: #333333
+	background: #f2f2f2
+	border: 1px solid #f4f4f4
 	width: 100%
+
+.brand
+	background: #a91818
+	border-radius: 50%
+	height: 60px
+	width: 60px
+
+.menu
+	position: absolute
 
 #menu
 	display: flex
+	width: 100%
 	justify-content: space-between
-
-#menu ul
-	display: flex
-	flex-wrap: wrap
-
-#menu li
-	display: flex
-	&:hover
-		background: #191919
-		border-bottom: 2px solid yellow
-
-#menu a
-	color: #fff
-	display: block
-	padding: 0.8em 0.5em
-	text-decoration: none
-
-
-@media (min-width: 641px)
-	#nav-mobile
-		display: none
-
-
-@media (max-width: 640px)
-	header
-		background: #f1f1f1
-	#menu
-		//display: none
-		background: #333333
-		display: block
-		position: absolute
-		left: 0
-		width: 100%
-		ul,
-		li
-			justify-content: center
-			width: 100%
-	#nav-mobile
+	ul
+		display: flex
 		a
 			display: block
-			padding: 1.2em 0.5em
-			i
-				position: absolute
-				right: 15px
-				top: 10px
-				font-size: 1.3em
-				color: #333333
+			padding: 15px 8px
+			text-decoration: none
+
+@media (max-width: 768px)
+	#menu
+		//display: none
+		display: block
+		ul
+			display: block
+			width: 100%
+			li
+				text-align: center
+				border-bottom: 1px solid rgba(199, 199, 199, 0.2)
+				width: 100%
+				a
+					padding: 15px 0px
+	#nav-mobile
+		color: #333333
+		font-size: 1.4em
+		position: absolute
+		top: 0.7em
+		right: 1em
+
+
+@media (min-width: 769px)
+	#nav-mobile
+		display: none

@@ -33,8 +33,9 @@ iframe {
 audio {
   border: 1px solid green; }
 
-/* Contenedor
- */
+.block-height {
+  margin: 1em 0em; }
+
 .container {
   margin: 0 auto;
   width: 75%; }
