@@ -6,6 +6,11 @@ $color-title : #333333
 $font-paragraph : 'Open Sans', sans-serif
 $color-paragraph : #4f4f4f
 
+@import _variables
+@import _grid
+@import _nav
+@import _form
+
 *
 	border: 0
 	margin: 0
@@ -16,8 +21,8 @@ html, body
 	color: $color-paragraph
 	font-family: $font-paragraph
 	font-size: 100%
-	height: 100%
-	width: 100%
+	height: 100vh
+	width: 100vw
 h1,
 h2,
 h3,
@@ -38,7 +43,34 @@ audio
 	border: 1px solid green
 
 
-@import _variables
-@import _grid
-@import _nav
-@import _form
+
+
+.wpraper
+	background: $green-alt-dark
+	color: $gray-light
+	height: 500px
+	padding: 1em 0em
+	ul
+		display: flex
+		li
+			border-bottom: 2px solid transparent
+			margin: 0em 1em
+			transition: all 1s
+			&:hover
+				border-bottom: 2px solid $gray-light
+			a
+				color: $gray-light
+				text-decoration: none
+
+
+.data-personal
+	display: flex
+	align-items: center
+	justify-content: center
+
+.box-avatar
+	background: $gray-light
+	border-radius: 50%
+	height: 100px
+	width: 100px
+
