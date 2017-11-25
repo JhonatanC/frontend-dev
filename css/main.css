@@ -1,4 +1,6 @@
-/*=== COLORES === */
+@charset "UTF-8";
+/*=== T├¡tulos === */
+/*=== P├írrafos === */
 /*=== colores tomados de : https://flatuicolors.com/ === */
 /*=== Tonos verdes === */
 /*=== Tonos verdes alternativos === */
@@ -10,7 +12,7 @@
 /*=== Tonos rojos === */
 /*=== Tonos gris claro === */
 /*=== Tonos gris oscuro alternativo === */
-/*=== COLORES === */
+/*=== Padding Columnas === */
 .block-height {
   margin: 1em 0em; }
 
@@ -413,36 +415,5 @@ img,
 video,
 iframe {
   max-width: 100%; }
-
-audio {
-  border: 1px solid green; }
-
-.wpraper {
-  background: #16a085;
-  color: #ecf0f1;
-  height: 500px;
-  padding: 1em 0em; }
-  .wpraper ul {
-    display: flex; }
-    .wpraper ul li {
-      border-bottom: 2px solid transparent;
-      margin: 0em 1em;
-      transition: all 1s; }
-      .wpraper ul li:hover {
-        border-bottom: 2px solid #ecf0f1; }
-      .wpraper ul li a {
-        color: #ecf0f1;
-        text-decoration: none; }
-
-.data-personal {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.box-avatar {
-  background: #ecf0f1;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px; }
 
 /*# sourceMappingURL=main.css.map */
