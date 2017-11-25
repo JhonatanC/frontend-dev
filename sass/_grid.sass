@@ -43,6 +43,7 @@ $spaceExtraSmallBottom: .5em
  * Contenedor
  */
 .container
+	/*display: flex*/
 	margin: 0 auto
 	width: $container-lg
 
@@ -51,6 +52,7 @@ $spaceExtraSmallBottom: .5em
  */
 .row
 	display: flex
+	flex-direction: row
 	flex-wrap: wrap
 	position: relative
 	width: 100%
@@ -170,6 +172,8 @@ $spaceExtraSmallBottom: .5em
 @media (min-width: 769px) and (max-width: 1023px)
 	.container
 		width: 95%
+	.row
+		flex-direction: row
 	.md-1
 		width: $size-1
 		padding: $paddin-column
@@ -266,6 +270,7 @@ $spaceExtraSmallBottom: .5em
 		width: 95%
 	.row
 		display: flex
+		flex-direction: column
 	.sm-1
 		width: $size-1
 		padding: $paddin-column
@@ -363,3 +368,5 @@ $spaceExtraSmallBottom: .5em
 @media (max-width: 320px)
 	.container
 		width: 100%
+	.row
+		flex-direction: column
