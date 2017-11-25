@@ -1,8 +1,13 @@
-// === Variables tamaños ===//
+/*
+ * Variables tamaños
+ */
 $container-lg : 75%
 $container-md : 95%
 $container-sm : 95%
-// === Columnas ===//
+
+/*
+ * Variables tamaños
+ */
 $size-1 : 8.333333333333333%
 $size-2 : 16.66666666666667%
 $size-3 : 25%
@@ -16,21 +21,34 @@ $size-10 : 83.33333333333333%
 $size-11 : 91.66666666666666%
 $size-12 : 100%
 
-/*=== Padding Columnas ===*/
-$paddin-column : 0em 1.5em
+/*
+ * Variables tamaños
+ */
+$paddin-column : .6em 1em
 
-// === Margenes arriba y abajo ===//
-$top-buttom : 1em 0em
+/*
+ * Variables tamaños
+ */
+$spaceLargeTop: 2em
+$spaceMediumTop: 1.5em
+$spaceSmallTop: 1em
+$spaceExtraSmallTop: .5em
 
-.block-height
-	margin: $top-buttom
+$spaceLargeBottom: 2em
+$spaceMediumBottom: 1.5em
+$spaceSmallBottom: 1em
+$spaceExtraSmallBottom: .5em
 
-// === Contenedor ===//
+/*
+ * Contenedor
+ */
 .container
 	margin: 0 auto
 	width: $container-lg
 
-// === Fila ===//
+/*
+ * Fila
+ */
 .row
 	display: flex
 	flex-wrap: wrap
@@ -40,15 +58,15 @@ $top-buttom : 1em 0em
 /*
  * Alinear elementos horizontales
  */
-.justify-cont-start
+.justify-start
 	justify-content: flex-start
-.justify-cont-end
+.justify-end
 	justify-content: flex-end
-.justify-cont-center
+.justify-center
 	justify-content: center
-.justify-cont-between
+.justify-between
 	justify-content: space-between
-.justify-cont-around
+.justify-around
 	justify-content: space-around
 
 /*
@@ -117,6 +135,34 @@ $top-buttom : 1em 0em
 		margin-left: $size-11
 	.lg-push-12
 		margin-left: $size-12
+	.lg-order-1
+		order: 1
+	.lg-order-2
+		order: 2
+	.lg-order-3
+		order: 3
+	.lg-order-4
+		order: 4
+	.lg-order-5
+		order: 5
+	.lg-order-6
+		order: 6
+	.lg-order-7
+		order: 7
+	.lg-order-8
+		order: 8
+	.lg-order-9
+		order: 9
+	.lg-order-10
+		order: 10
+	.lg-order-11
+		order: 11
+	.lg-order-12
+		order: 12
+	.lg-topSpace
+		margin-top: $spaceLargeTop
+	.lg-bottomSpace
+		margin-bottom: $spaceLargeBottom
 
 /*
  * Tablets
@@ -184,6 +230,34 @@ $top-buttom : 1em 0em
 		margin-left: $size-11
 	.md-push-12
 		margin-left: $size-12
+	.md-order-1
+		order: 1
+	.md-order-2
+		order: 2
+	.md-order-3
+		order: 3
+	.md-order-4
+		order: 4
+	.md-order-5
+		order: 5
+	.md-order-6
+		order: 6
+	.md-order-7
+		order: 7
+	.md-order-8
+		order: 8
+	.md-order-9
+		order: 9
+	.md-order-10
+		order: 10
+	.md-order-11
+		order: 11
+	.md-order-12
+		order: 12
+	.md-topSpace
+		margin-top: $spaceMediumTop
+	.md-bottomSpace
+		margin-bottom: $spaceLargeBottom
 /*
  * Smartphone
  */
@@ -191,7 +265,7 @@ $top-buttom : 1em 0em
 	.container
 		width: 95%
 	.row
-		display: block
+		display: flex
 	.sm-1
 		width: $size-1
 		padding: $paddin-column
@@ -252,3 +326,40 @@ $top-buttom : 1em 0em
 		margin-left: $size-11
 	.sm-push-12
 		margin-left: $size-12
+	.sm-order-1
+		order: 1
+	.sm-order-2
+		order: 2
+	.sm-order-3
+		order: 3
+	.sm-order-4
+		order: 4
+	.sm-order-5
+		order: 5
+	.sm-order-6
+		order: 6
+	.sm-order-7
+		order: 7
+	.sm-order-8
+		order: 8
+	.sm-order-9
+		order: 9
+	.sm-order-10
+		order: 10
+	.sm-order-11
+		order: 11
+	.sm-order-12
+		order: 12
+	.sm-topSpace
+		margin-top: $spaceSmallTop
+	.ex-sm
+		margin-top: $spaceExtraSmallTop
+	.sm-bottomSpace
+		margin-bottom: $spaceLargeBottom
+	.ex-sm
+		margin-top: $spaceExtraSmallTop
+
+
+@media (max-width: 320px)
+	.container
+		width: 100%
