@@ -1,6 +1,7 @@
 header
 	background: #f2f2f2
 	border: 1px solid #f4f4f4
+	padding: .4em 0em
 	width: 100%
 
 .brand
@@ -14,19 +15,21 @@ header
 
 #menu
 	display: flex
-	/*width: 100%*/
 	justify-content: space-between
 	ul
 		display: flex
-		a
-			display: block
-			padding: 15px 8px
-			text-decoration: none
+		li
+			a
+				display: block
+				padding: 15px 8px
+				text-decoration: none
+		li > ul
+			display: none
+			
 
 @media (max-width: 768px)
 	#menu
-		//display: none
-		display: flex
+		display: none
 		flex-direction: column
 		ul
 			display: block
@@ -43,8 +46,21 @@ header
 		position: absolute
 		top: 0.7em
 		right: 1em
+	.nav-button
+		background: transparent
+		border-radius: 4px
+		border: 1px solid #bdc3c7
+		color: #2c3e50
+		font-size: 18px
+		padding: .3em .6em
+		position: absolute
+		top: 1em
+		right: .4em
+
+	.showMenu
+		display: flex !important
 
 
 @media (min-width: 769px)
-	#nav-mobile
+	.nav-button
 		display: none
