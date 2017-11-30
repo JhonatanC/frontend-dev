@@ -9,32 +9,67 @@
 	margin: .3em 0em
 	padding: .6em 1em
 
+@mixin textShadow($x,$y,$color)
+	text-shadow: $x $y $color
+
+
+.btn-out-green-d
+	@include btn(transparent,$dark-green,$dark-green)
+	&:hover
+		@include btn($mint-green-out,$mint-green,$clouds)
+		@include textShadow(1px, 1px, $dark-green)
+
+
 .btn-green-d
 	@include btn($mint-green,$dark-green,$clouds)
+	@include textShadow(1px, 1px, $dark-green)
 	&:hover
 		@include btn($dark-green,$mint-green,$clouds)
 
 .btn-green-l
 	@include btn($light-green,$green,$clouds)
+	@include textShadow(1px, 1px, $green)
 	&:hover
 		@include btn($green,$light-green,$clouds)
 
 .btn-blue
 	@include btn($sky-blue,$navy-blue,$clouds)
+	@include textShadow(1px, 1px, $navy-blue)
 	&:hover
 		@include btn($navy-blue,$sky-blue,$clouds)
 
 .btn-purple
 	@include btn($light-purple,$purple,$clouds)
+	@include textShadow(1px, 1px, $purple)
 	&:hover
 		@include btn($purple,$light-purple,$clouds)
+
+.btn-asphalt
+	@include btn($wet-asphalt,$dark-blue,$clouds)
+	&:hover
+		@include btn($dark-blue,$wet-asphalt,$clouds)
+
+.btn-yellow
+	@include btn($yellow,$orange,$clouds)
+	&:hover
+		@include btn($orange,$yellow,$clouds)
+
+.btn-carrot
+	@include btn($carrot,$dark-orange,$clouds)
+	&:hover
+		@include btn($dark-orange,$carrot,$clouds)
 
 .btn-red
 	@include btn($red,$dark-red,$clouds)
 	&:hover
 		@include btn($dark-red,$red,$clouds)
 
-.btn-orange
-	@include btn($orange,$dark-orange,$clouds)
+.btn-clouds
+	@include btn($clouds,$silver,$grey)
 	&:hover
-		@include btn($dark-orange,$orange,$clouds)
+		@include btn($silver,$clouds,$clouds)
+
+.btn-grey
+	@include btn($grey,$dark-grey,$clouds)
+	&:hover
+		@include btn($dark-grey,$grey,$clouds)
