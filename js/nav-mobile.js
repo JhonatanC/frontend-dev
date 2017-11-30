@@ -1,31 +1,18 @@
-var navButton = document.querySelector('#nav-button')
-var menu = document.querySelector('#menu')
+$(function(){
 
-var items = document.querySelectorAll('li > a');
+	var $navButton = $('#nav-button')
+	var $menu = $('#menu')
 
-var ul = document.querySelector('li > ul');
-
-var a = document.querySelectorAll('a')
-
-var body = document.querySelector('body')
-
-items.forEach(function(el,index){
-	el.addEventListener('click',function(ev){
-		//el.style.background = 'black'
-		//body.style.background = 'black'
-		//ul.style.display = 'block'
-		this.style.display = 'block'
-		console.log(el)
+	$navButton.click((ev) => {
+		$menu.slideToggle()
 	})
-})
 
-navButton.addEventListener('click',function(ev){
-	menu.classList.toggle('showMenu')
-})
+	var $down = $('.down')
 
-/*items.forEach(function(el){
-	el.addEventListener('click',function(ev){
-		ev.preventDefault()
-		console.log(ev)
+	$down.click(function(ev){
+		//$(this).children('ul').slideDown()
+		$('.down ul').not($('.down ul',this)).slideUp('slow').next();
+		$(this).children('ul').slideToggle('slow').end();
 	})
-})*/
+
+});

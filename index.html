@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<header>
+	<header class="header-blue">
 		<section class="container">
 			<div class="row justify-between">
 				<div class="brand"></div>
@@ -20,14 +20,25 @@
 				<nav id="menu">
 					<ul>
 						<li><a href="#">Inicio</a></li>
-						<li>
+						<li class="down">
 							<a href="#">Portafolio</a>
 							<ul>
 								<li><a href="#">Kellys</a></li>
-								<li><a href="#">Casino</a></li>
+								<li class="down">
+									<a href="#">Casino</a>
+									<ul>
+										<li><a href="#">Aladdin</a></li>
+										<li class="down">
+											<a href="#">Dorado</a>
+											<ul>
+												<li><a href="#">MVG</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
 							</ul>
 						</li>
-						<li>
+						<li class="down">
 							<a href="#">Blog</a>
 							<ul>
 								<li><a href="#">Bootstrap</a></li>
@@ -42,41 +53,95 @@
 		</section>
 	</header>
 
-	<section class="container">
-		<div class="row justify-around">
-			<div class="uno sm-12 md-6 lg-4 sm-topSpace">
-				<h2>Título Uno</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum soluta pariatur expedita sequi voluptates laudantium vero sint beatae, deleniti illo enim dicta fuga hic consequuntur velit optio fugit perferendis exercitationem!</p>
+	<div id="app">
+		<div class="container">
+
+			<div class="row">
+
+				<div class="lg-12">
+					<h1 class="text-center text-yellow">Introducción Básica a Vue.js</h1>
+				</div>
+
+				<div class="lg-9">
+					<h2 class="text-orange">Imprimir mensaje</h2>
+					<div class="row">
+						<p>{{ message }}</p>
+					</div>
+					<hr>
+
+					<h2>v-bind - Enlazar tags con propiedades de la data</h2>
+					<div class="row">
+						<span v-bind:title="title">
+							¡Deja tu mouse sobre este mensaje unos segundos para ver el atributo `title` enlazado dinámicamente!
+						</span>
+					</div>
+					<hr>
+
+					<h2>v-if - Condicional</h2>
+					<div class="row">
+						<p v-if="show">Ahora me ves!</p>
+					</div>
+					<hr/>
+
+					<h2>v-for - Ciclos</h2>
+					<ul v-for="todo in todos">
+						<li>• {{ todo.text }}</li>
+					</ul>
+					<hr/>
+
+					<h2>v-on:evento="function" / @evento="function" - Manejador de eventos</h2>
+					<h3>v-on:click / @click</h3>
+					<p>{{ clickMessage }}</p>
+					<button class="btn-red" @click="reverseMessage">Click Me!</button>
+					<hr/>
+
+					<h2>v-model - Enlaces de entrada de formulario</h2>
+					<input type="text" v-model="messageInput" placeholder="Intruduce algo">
+					<p>{{ messageInput }}</p> <br>
+					<hr/>
+
+					<div class="row">
+						<div class="lg-12">
+							<h2>Componentes</h2>
+						</div>
+						<div class="lg-6">
+							<h3>Componente básico sin props</h3>
+							<ol>
+							  <todo-item-1></todo-item-1>
+							</ol>
+						</div>
+						<div class="lg-6">
+							<h3>Componente básico con props</h3>
+							<ol>
+							  <todo-item-2 v-for="item in groceryList" v-bind:todo="item"></todo-item-2>
+							</ol>
+						</div>
+					</div>
+
+				</div>
+
+	 			<div class="lg-3">
+	 				<h2>Botones</h2>
+	 				<button class="btn-green-d">Green Dark</button>
+	 				<button class="btn-green-l">Green Ligth</button>
+	 				<button class="btn-blue">Azul</button>
+	 				<button class="btn-purple">Purple</button>
+	 				<button class="btn-red">Red</button>
+	 				<button class="btn-orange">Orange</button>
+	 			</div>
 			</div>
-			<div class="dos sm-12 md-6 lg-4 sm-topSpace">
-				<h2>Título Dos</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum soluta pariatur expedita sequi voluptates laudantium vero sint beatae, deleniti illo enim dicta fuga hic consequuntur velit optio fugit perferendis exercitationem!</p>
-			</div>
-			<div class="tres sm-12 md-6 lg-4 sm-topSpace md-topSpace">
-				<h2>Título Tres</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum soluta pariatur expedita sequi voluptates laudantium vero sint beatae, deleniti illo enim dicta fuga hic consequuntur velit optio fugit perferendis exercitationem!</p>
-			</div>
-			<div class="cuatro sm-12 md-6 lg-4 sm-topSpace md-topSpace lg-topSpace">
-				<h2>Título Cuatro</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum soluta pariatur expedita sequi voluptates laudantium vero sint beatae, deleniti illo enim dicta fuga hic consequuntur velit optio fugit perferendis exercitationem!</p>
-			</div>
-			<div class="cinco sm-12 md-6 lg-4 sm-topSpace md-topSpace lg-topSpace">
-				<h2>Título Cinco</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum soluta pariatur expedita sequi voluptates laudantium vero sint beatae, deleniti illo enim dicta fuga hic consequuntur velit optio fugit perferendis exercitationem!</p>
-			</div>
-			<div class="seis sm-12 md-6 lg-4 sm-topSpace md-topSpace lg-topSpace">
-				<h2>Título Seis</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum soluta pariatur expedita sequi voluptates laudantium vero sint beatae, deleniti illo enim dicta fuga hic consequuntur velit optio fugit perferendis exercitationem!</p>
-			</div>
+
 		</div>
-	</section>
+	</div>
+
 
 
 	<!-- css.app.min -->
 	<!--<link rel="stylesheet" href="">-->
 
-	<!-- url para cargar de fuentes -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="js/nav-mobile.js"></script>
+	<!-- url para cargar de fuentes -->
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 	<script>
 		// Carga Asincronica de fuentes
@@ -85,6 +150,46 @@
 				families: ['Open Sans', 'Roboto Slab']
 		 	}
 		 });
+	</script>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script>
+
+		Vue.component('todo-item-1', {
+		  	template: '<li>This is a todo</li>'
+		})
+
+		Vue.component('todo-item-2', {
+			props : ['todo'],
+		  	template: '<li>{{ todo.text }}</li>'
+		})
+
+		var app = new Vue({
+			el: '#app',
+			data: {
+				message: 'Introduciendo VueJs',
+				title: 'Atributo title',
+				show: true,
+				todos : [
+					{ text: 'Learn JavaScript' },
+				    { text: 'Learn Vue' },
+				    { text: 'Build something awesome' }
+				],
+				clickMessage: 'paranguacuaturimicuaro',
+				messageInput: '',
+				groceryList: [
+			      { text: 'Vegetables' },
+			      { text: 'Cheese' },
+			      { text: 'Whatever else humans are supposed to eat' }
+			    ]
+			},
+			methods: {
+				reverseMessage: function(){
+					this.clickMessage = this.clickMessage.split('').reverse().join('')
+				}
+			}
+		})
+
 	</script>
 
 </body>

@@ -1,0 +1,40 @@
+@mixin btn($background,$border,$color)
+	background: $background
+	border-radius: 4px
+	border: 1px solid $border
+	color: $color
+	cursor: pointer
+	font-size: 16px
+	font-weight: bold
+	margin: .3em 0em
+	padding: .6em 1em
+
+.btn-green-d
+	@include btn($mint-green,$dark-green,$clouds)
+	&:hover
+		@include btn($dark-green,$mint-green,$clouds)
+
+.btn-green-l
+	@include btn($light-green,$green,$clouds)
+	&:hover
+		@include btn($green,$light-green,$clouds)
+
+.btn-blue
+	@include btn($sky-blue,$navy-blue,$clouds)
+	&:hover
+		@include btn($navy-blue,$sky-blue,$clouds)
+
+.btn-purple
+	@include btn($light-purple,$purple,$clouds)
+	&:hover
+		@include btn($purple,$light-purple,$clouds)
+
+.btn-red
+	@include btn($red,$dark-red,$clouds)
+	&:hover
+		@include btn($dark-red,$red,$clouds)
+
+.btn-orange
+	@include btn($orange,$dark-orange,$clouds)
+	&:hover
+		@include btn($dark-orange,$orange,$clouds)

@@ -1,6 +1,38 @@
+.header-default
+	background : $clouds
+	border: 1px solid $dark-grey
+
+.header-green-l
+	background : $light-green
+	border: 1px solid $green
+
+.header-green-d
+	background : $mint-green
+	border: 1px solid $dark-green
+
+.header-blue
+	background : $sky-blue
+	border: 1px solid $navy-blue
+
+.header-purple
+	background : $light-purple
+	border: 1px solid $purple
+
+.header-asphalt
+	background : $wet-asphalt
+	border: 1px solid $dark-blue
+
+.header-yellow
+	background : $yellow
+	border: 1px solid $orange
+
+.header-carrot
+	background : $carrot
+	border: 1px solid $dark-orange
+
+
 header
 	background: #f2f2f2
-	border: 1px solid #f4f4f4
 	padding: .4em 0em
 	width: 100%
 
@@ -19,13 +51,28 @@ header
 	ul
 		display: flex
 		li
+			position: relative
 			a
 				display: block
 				padding: 15px 8px
 				text-decoration: none
 		li > ul
 			display: none
-			
+			position: absolute
+
+
+
+
+@media (min-width: 769px)
+	.nav-button
+		display: none
+	#menu
+		display: flex !important
+
+
+
+
+
 
 @media (max-width: 768px)
 	#menu
@@ -61,6 +108,3 @@ header
 		display: flex !important
 
 
-@media (min-width: 769px)
-	.nav-button
-		display: none
