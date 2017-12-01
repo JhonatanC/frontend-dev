@@ -12,14 +12,6 @@
 @mixin textShadow($x,$y,$color)
 	text-shadow: $x $y $color
 
-
-.btn-out-green-d
-	@include btn(transparent,$dark-green,$dark-green)
-	&:hover
-		@include btn($mint-green-out,$mint-green,$clouds)
-		@include textShadow(1px, 1px, $dark-green)
-
-
 .btn-green-d
 	@include btn($mint-green,$dark-green,$clouds)
 	@include textShadow(1px, 1px, $dark-green)
@@ -51,6 +43,7 @@
 
 .btn-yellow
 	@include btn($yellow,$orange,$clouds)
+	@include textShadow(1px, 1px, $orange)
 	&:hover
 		@include btn($orange,$yellow,$clouds)
 
@@ -73,3 +66,63 @@
 	@include btn($grey,$dark-grey,$clouds)
 	&:hover
 		@include btn($dark-grey,$grey,$clouds)
+
+
+.btn-out-green-d
+	@include btn(transparent,$dark-green,$dark-green)
+
+.btn-out-green-l
+	@include btn(transparent,$green,$green)
+
+
+
+@mixin btn-gradient($primary,$secundary)
+	background : $primary
+	background: -moz-linear-gradient(-45deg, $primary 0%, $secundary 100%)
+	background: -webkit-linear-gradient(-45deg, $primary 0%,$secundary 100%)
+	background: linear-gradient(135deg, $primary 0%,$secundary 100%)
+	border-radius: 4px
+	border: 1px solid #ffffff
+	color: #ffffff
+	cursor: pointer
+	font-size: 16px
+	font-weight: bold
+	margin: .3em 0em
+	padding: .6em 1em
+
+.btn-g-green-d
+	@include btn-gradient($mint-green,$dark-green)
+
+.btn-g-green-l
+	@include btn-gradient($light-green,$green)
+
+.btn-g-blue
+	@include btn-gradient($sky-blue,$navy-blue)
+
+.btn-g-purple
+	@include btn-gradient($light-purple,$purple)
+
+.btn-g-asphalt
+	@include btn-gradient($wet-asphalt,$dark-blue)
+
+.btn-g-yellow
+	@include btn-gradient($yellow,$orange)
+
+.btn-g-carrot
+	@include btn-gradient($carrot,$dark-orange)
+
+.btn-g-clouds
+	@include btn-gradient($clouds,$silver)
+
+.btn-g-red
+	@include btn-gradient($red,$dark-red)
+
+.btn-g-grey
+	@include btn-gradient($grey,$dark-grey)
+
+// background: rgb(26,188,153)
+// background: -moz-linear-gradient(-45deg, rgb(26,188,153) 0%, rgb(22,160,133) 100%)
+// background: -webkit-linear-gradient(-45deg, rgb(26,188,153) 0%,rgb(22,160,133) 100%)
+// background: linear-gradient(135deg, rgb(26,188,153) 0%,rgb(22,160,133) 100%)
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1abc99', endColorstr='#16a085',GradientType=1 )
+

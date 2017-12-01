@@ -1,7 +1,40 @@
-.alert-green-d
-	background: $green
-	border: 1px solid $dark-green
+@mixin alerts($rgb,$alpha)
+	background : rgba($rgb,$alpha)
+	border : 1px solid rgba($rgb,$alpha)
 	border-radius: 3px
-	color: $dark-green
-	padding: .5em 1em
+	color : $rgb
+	font-weight : bold
+	padding: .6em 1em
 	width: 100%
+
+
+.alert-mint-green
+	@include alerts($mint-green,.2)
+
+.alert-dark-green
+	@include alerts($dark-green,.2)
+
+.alert-light-green
+	@include alerts($light-green,.2)
+
+.alert-green
+	@include alerts($green,.2)
+
+.alert-sky-blue
+	@include alerts($sky-blue,.2)
+
+.alert-navy-blue
+	@include alerts($navy-blue,.2)
+
+.alert-light-purple
+	@include alerts($light-purple,.2)
+
+.alert-purple
+	@include alerts($purple,.2)
+
+.alert-wet-asphalt
+	@include alerts($wet-asphalt,.2)
+
+.alert-dark-blue
+	@include alerts($dark-blue,.2)
+
