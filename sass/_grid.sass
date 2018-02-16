@@ -23,14 +23,14 @@
 	padding: 1em
 
 /*Clase pendiente para revisar las altuas en diferentes contenedores*/
-.col-sibling
+/*.col-sibling*/
 
 /*Medida columnas para smartphone - sm*/
 @media screen and (min-width: 0px)
 	.container
 		width: 95%
 	.row
-		flex-direction: colunm
+		flex-direction: column
 	/*Tamaño de columnas*/
 	.sm-1
 		width: 8.333333333333333%
@@ -2370,3 +2370,16 @@
 		justify-content: space-between
 	.lg-justify-around
 		justify-content: space-around
+
+/* Ocultando bloques de desktop a móviles */
+@media (min-width: 0px) and (max-width: 768px)
+	.sm-hidde
+		display: none
+	.sm-show
+		display: block !important
+
+@media (min-width: 769px) and (max-width: 1024px)
+	.md-hidde
+		display: none
+	.md-show
+		display: block !important
