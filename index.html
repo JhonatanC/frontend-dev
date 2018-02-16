@@ -3,219 +3,83 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Probando Grid.Sass</title>
+	<title>Frontend - Dev</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<!--<style></style>-->
 </head>
 <body>
 
-	<!--<header class="header">
-		<section class="container">
-			<div class="row justify-between">
-				<div class="brand"></div>
-
-				<button id="nav-button" class="nav-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
-
-				<nav id="menu">
-					<ul>
-						<li><a href="#">Inicio</a></li>
-						<li class="down">
-							<a href="#">Portafolio</a>
-							<ul>
-								<li><a href="#">Kellys</a></li>
-								<li class="down">
-									<a href="#">Casino</a>
-									<ul>
-										<li><a href="#">Aladdin</a></li>
-										<li class="down">
-											<a href="#">Dorado</a>
-											<ul>
-												<li><a href="#">MVG</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="down">
-							<a href="#">Blog</a>
-							<ul>
-								<li><a href="#">Bootstrap</a></li>
-								<li><a href="#">Laravel</a></li>
-								<li><a href="#">VueJs</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Contacto</a></li>
-					</ul>
-				</nav>
-			</div>
-		</section>
-	</header>-->
-
 	<div id="app">
 
 		<div class="container">
 
-			<div class="row sm-mtb-1">
-				<div class="lg-1 column">1</div>
-				<div class="lg-1 column">2</div>
-				<div class="lg-1 column">3</div>
-				<div class="lg-1 column">4</div>
-				<div class="lg-1 column">5</div>
-				<div class="lg-1 column">6</div>
-				<div class="lg-1 column">7</div>
-				<div class="lg-1 column">8</div>
-				<div class="lg-1 column">9</div>
-				<div class="lg-1 column">10</div>
-				<div class="lg-1 column">11</div>
-				<div class="lg-1 column">12</div>
-			</div>
-
-			<div class="row sm-mtb-1">
-				<div class="lg-2 column">1</div>
-				<div class="lg-2 column">2</div>
-				<div class="lg-2 column">3</div>
-				<div class="lg-2 column">4</div>
-				<div class="lg-2 column">5</div>
-				<div class="lg-2 column">6</div>
-			</div>
-
-			<div class="row sm-mtb-1">
-				<div class="sm-12 md-6 column">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati tenetur numquam fugiat ipsum, laboriosam mollitia molestias sit, cumque quasi aliquid corporis consequuntur, consectetur nostrum vel, sed animi dicta debitis veritatis.
-				</div>
-				<div class="sm-12 md-hidde md-6 column">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, cumque nihil. Totam laboriosam in beatae, deleniti numquam facere ratione mollitia! Adipisci aperiam blanditiis ad unde atque nostrum magni vero sunt.
+			<div class="row sm-ptb-1">
+				<div class="sm-12">
+					<h1 class="text-center">Sistema de rejillas (12)</h1>
 				</div>
 			</div>
-
-		</div>
-
-
-
-		<!--<div class="container">
 
 			<div class="row">
-
-				<div class="sm-12 md-12 lg-6">
-					<h2 class="text-center">Alertas</h2>
-					<p class="alert-mint-green">Alerta Mint Green</p>
-					<p class="alert-dark-green">Alerta Dark Green</p>
-					<p class="alert-light-green">Alerta Light Green</p>
-					<p class="alert-green">Alerta Green</p>
-					<p class="alert-sky-blue">Sky Blue</p>
-					<p class="alert-navy-blue">Navy Blue</p>
-					<p class="alert-light-purple">Light Purple</p>
-					<p class="alert-purple">Purple</p>
-					<p class="alert-wet-asphalt">Wet Asphalt</p>
-					<p class="alert-dark-blue">Dark Blue</p>
+				<div class="column sm-12 md-12">
+					<h2>column sm-12 md-12</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae sequi eius magni totam, cum expedita, temporibus culpa, sapiente consequatur nihil suscipit. Pariatur totam, voluptatum quas rerum, adipisci nostrum reiciendis dicta.
 				</div>
-
-				<div class="lg-6">
-					<h2 class="text-center">Botones</h2>
-					<button class="btn-green-d">Green Dark</button>
-					<button class="btn-green-l">Green Ligth</button>
-					<button class="btn-blue">Sky Blue</button>
-					<button class="btn-purple">Purple</button>
-					<button class="btn-asphalt">Asphalt</button>
-					<button class="btn-yellow">Yellow</button>
-					<button class="btn-carrot">Carrot</button>
-					<button class="btn-clouds">Clouds</button>
-					<button class="btn-red">Red</button>
-					<button class="btn-grey">Grey</button>
-
-					<h2 class="text-center">Botones Outline</h2>
-					<button class="btn-out-green-d">Green Dark</button>
-					<button class="btn-out-green-l">Green Ligth</button>
-
-					<h2 class="text-center">Botones con Degradados</h2>
-					<button class="btn-g-green-d">Green Dark</button>
-					<button class="btn-g-green-l">Green Ligth</button>
-					<button class="btn-g-blue">Sky Blue</button>
-					<button class="btn-g-purple">Purple</button>
-					<button class="btn-g-asphalt">Asphalt</button>
-					<button class="btn-g-yellow">Yellow</button>
-					<button class="btn-g-carrot">Carrot</button>
-					<button class="btn-g-clouds">Clouds</button>
-					<button class="btn-g-red">Red</button>
-					<button class="btn-g-grey">Grey</button>
+				<div class="column sm-12 md-6">
+					<h2>column sm-12 md-6</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae sequi eius magni totam, cum expedita, temporibus culpa, sapiente consequatur nihil suscipit. Pariatur totam, voluptatum quas rerum, adipisci nostrum reiciendis dicta.
 				</div>
-
-				<div class="lg-12">
-					<h1 class="text-center">Introducción Básica a Vue.js</h1>
-				</div>
-
-				<div class="lg-9">
-					<h2>Imprimir mensaje</h2>
-					<div class="row">
-						<p>{{ message }}</p>
-					</div>
-					<hr>
-
-					<h2>v-bind - Enlazar tags con propiedades de la data</h2>
-					<div class="row">
-						<span v-bind:title="title">
-							¡Deja tu mouse sobre este mensaje unos segundos para ver el atributo `title` enlazado dinámicamente!
-						</span>
-					</div>
-					<hr>
-
-					<h2>v-if - Condicional</h2>
-					<div class="row">
-						<p v-if="show">Ahora me ves!</p>
-					</div>
-					<hr/>
-
-					<h2>v-for - Ciclos</h2>
-					<ul v-for="todo in todos">
-						<li>• {{ todo.text }}</li>
-					</ul>
-					<hr/>
-
-					<h2>v-on:evento="function" / @evento="function" - Manejador de eventos</h2>
-					<h3>v-on:click / @click</h3>
-					<p>{{ clickMessage }}</p>
-					<button class="btn-red" @click="reverseMessage">Click Me!</button>
-					<hr/>
-
-					<h2>v-model - Enlaces de entrada de formulario</h2>
-					<input type="text" v-model="messageInput" placeholder="Intruduce algo">
-					<p>{{ messageInput }}</p> <br>
-					<hr/>
-
-					<div class="row">
-						<div class="lg-12">
-							<h2>Componentes</h2>
-						</div>
-						<div class="lg-6">
-							<h3>Componente básico sin props</h3>
-							<ol>
-							  <todo-item-1></todo-item-1>
-							</ol>
-						</div>
-						<div class="lg-6">
-							<h3>Componente básico con props</h3>
-							<ol>
-							  <todo-item-2 v-for="item in groceryList" v-bind:todo="item"></todo-item-2>
-							</ol>
-						</div>
-					</div>
-
+				<div class="column sm-12 md-6 md-hidde">
+					<h2>column sm-12 md-6</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur minus non modi, saepe quis quos quisquam. Laboriosam, dicta, necessitatibus! Necessitatibus consequuntur magnam nam ab maiores accusantium quod, officiis odio.
 				</div>
 			</div>
-		</div>-->
 
-		
+			<div class="row sm-justify-between lg-justify-center">
+				<div class="column sm-12 md-4">
+					<h2>column sm-12 md-4</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae sequi eius magni totam, cum expedita, temporibus culpa, sapiente consequatur nihil suscipit. Pariatur totam, voluptatum quas rerum, adipisci nostrum reiciendis dicta.
+				</div>
+				<div class="column sm-12 md-4">
+					<h2>column sm-12 md-4</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur minus non modi, saepe quis quos quisquam. Laboriosam, dicta, necessitatibus! Necessitatibus consequuntur magnam nam ab maiores accusantium quod, officiis odio.
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column sm-12 md-2">
+					<h2>column sm-12 md-2</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae sequi eius magni totam, cum expedita, temporibus culpa, sapiente consequatur nihil suscipit. Pariatur totam, voluptatum quas rerum, adipisci nostrum reiciendis dicta.
+				</div>
+				<div class="column sm-12 md-2">
+					<h2>column sm-12 md-2</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur minus non modi, saepe quis quos quisquam. Laboriosam, dicta, necessitatibus! Necessitatibus consequuntur magnam nam ab maiores accusantium quod, officiis odio.
+				</div>
+				<div class="column sm-12 md-2">
+					<h2>column sm-12 md-2</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur minus non modi, saepe quis quos quisquam. Laboriosam, dicta, necessitatibus! Necessitatibus consequuntur magnam nam ab maiores accusantium quod, officiis odio.
+				</div>
+				<div class="column sm-12 md-2">
+					<h2>column sm-12 md-2</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae sequi eius magni totam, cum expedita, temporibus culpa, sapiente consequatur nihil suscipit. Pariatur totam, voluptatum quas rerum, adipisci nostrum reiciendis dicta.
+				</div>
+				<div class="column sm-12 md-2">
+					<h2>column sm-12 md-2</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur minus non modi, saepe quis quos quisquam. Laboriosam, dicta, necessitatibus! Necessitatibus consequuntur magnam nam ab maiores accusantium quod, officiis odio.
+				</div>
+				<div class="column sm-12 md-2">
+					<h2>column sm-12 md-2</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum consequuntur minus non modi, saepe quis quos quisquam. Laboriosam, dicta, necessitatibus! Necessitatibus consequuntur magnam nam ab maiores accusantium quod, officiis odio.
+				</div>
+			</div>
+
+		</div>	
+
 	</div>
-
-
 
 	<!-- css.app.min -->
 	<!--<link rel="stylesheet" href="">-->
-
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="js/nav-mobile.js"></script>
 	<!-- url para cargar de fuentes -->
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 	<script>
@@ -228,44 +92,6 @@
 	</script>
 
 	<script src="https://unpkg.com/vue"></script>
-	<script>
-
-		Vue.component('todo-item-1', {
-		  	template: '<li>This is a todo</li>'
-		})
-
-		Vue.component('todo-item-2', {
-			props : ['todo'],
-		  	template: '<li>{{ todo.text }}</li>'
-		})
-
-		var app = new Vue({
-			el: '#app',
-			data: {
-				message: 'Introduciendo VueJs',
-				title: 'Atributo title',
-				show: true,
-				todos : [
-					{ text: 'Learn JavaScript' },
-				    { text: 'Learn Vue' },
-				    { text: 'Build something awesome' }
-				],
-				clickMessage: 'paranguacuaturimicuaro',
-				messageInput: '',
-				groceryList: [
-			      { text: 'Vegetables' },
-			      { text: 'Cheese' },
-			      { text: 'Whatever else humans are supposed to eat' }
-			    ]
-			},
-			methods: {
-				reverseMessage: function(){
-					this.clickMessage = this.clickMessage.split('').reverse().join('')
-				}
-			}
-		})
-
-	</script>
 
 </body>
 </html>

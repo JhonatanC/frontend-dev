@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Frontend - Dev</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!--<style></style>-->
+	<style>
+		li strong {
+			color: #6cff00fc;
+		}
+		li span{
+			color: #ffcc00;
+		}
+		li em {
+			display: block;
+			margin: 5px 0px
+		}
+		em.note{
+			color: #ff0000;
+		}
+		.box-note{
+			background: #191919;
+		    border-radius: 3px;
+		    padding: 1em;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="app">
+
+		<div class="container">
+
+			<div class="row sm-mtb-1">
+				<div class="sm-12">
+					<h1 class="text-center">Sistema de regillas (12) - En construcción</h1>
+				</div>
+				<div class="col sm-12">
+					<p>La filosofía de los sitios web es algo fácil de comprender, son una serie de filas y columnas con tamaños en específico. A continuación te estaré mostrando como funciona esta pequeña librería.</p>
+					<p>Tenemos las siguientes clases:</p>
+					<ul>
+						<li><em>- Filas y columnas</em></li>
+
+						<li><strong>row:</strong> Define una fila.</li>
+						<li><strong>col:</strong> Define una columna con padding a los lados.</li>
+						<li><strong>column:</strong> Define una columna con padding a los lados, arriba y abajo.</li>
+
+						<li><em>Comportamiento de columnas, tamaños, márgenes y padding, reciben un valor entre 1 y 12, anteponiendo su respectivo prefijo para indicar a qué dispositivo hace referencia. <strong>sm-# (pequeños), md-# (medianos), lg-# (grandes).</strong></em></li>
+
+						<li><em>- Tamaños</em></li>
+
+						<li>Puedes darle tamaños a una columna agregando la siguiente clase <span>sm-7</span>, aquí estaríamos agregando una columna que abarque 7 espacio en nuestro sistema de 12 <strong>sm-#:</strong> creando una columna de 7, quedaría de la siguiente forma</li>
+					</ul>
+
+					<div class="row sm-mtb-1">
+						<div class="column sm-12 md-6 lg-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem similique magni ad corporis repellat repudiandae, odio modi, non officiis dolores, aperiam provident voluptate aut nobis quod eligendi dolorum, a voluptatem!</div>
+						<div class="column sm-12 md-6 lg-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem similique magni ad corporis repellat repudiandae, odio modi, non officiis dolores, aperiam provident voluptate aut nobis quod eligendi dolorum, a voluptatem!</div>
+						<div class="column sm-12 md-6 lg-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem similique magni ad corporis repellat repudiandae, odio modi, non officiis dolores, aperiam provident voluptate aut nobis quod eligendi dolorum, a voluptatem!</div>
+					</div>
+
+					<ul>
+						<li><strong>sm-push-#:</strong> empuja las columnas, recibe un valor(#) entre 1 y 12, <span>ejemplo: sm-push-7</span></li>
+
+						<li><em>- Márgenes</em></li>
+
+						<li><strong>sm-mt-#:</strong> margin top, <span>ejemplo: sm-mt-1</span></li>
+						<li><strong>sm-mb-#:</strong> margin bottom, <span>ejemplo: sm-mb-1</span></li>
+						<li><strong>sm-ml-#:</strong> margin left, <span>ejemplo: sm-ml-1</span></li>
+						<li><strong>sm-mr-#:</strong> margin right, <span>ejemplo: sm-mr-1</span></li>
+						<li><strong>sm-mtb-#:</strong> margin top y bottom, <span>ejemplo: sm-mtp-1</span></li>
+					</ul>
+
+					<p class="box-note text-center"><em class="note">Puedes cambiar el prefijo sm, por md o lg para variar el comportamiento entre los diferentes dispositivos</em></p>
+				</div>
+			</div>
+
+			<div class="row sm-mtb-1">
+				<div class="column sm-12 md-6 lg-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem similique magni ad corporis repellat repudiandae, odio modi, non officiis dolores, aperiam provident voluptate aut nobis quod eligendi dolorum, a voluptatem!</div>
+				<div class="column sm-12 md-6 lg-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem similique magni ad corporis repellat repudiandae, odio modi, non officiis dolores, aperiam provident voluptate aut nobis quod eligendi dolorum, a voluptatem!</div>
+				<div class="column sm-12 md-6 lg-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem similique magni ad corporis repellat repudiandae, odio modi, non officiis dolores, aperiam provident voluptate aut nobis quod eligendi dolorum, a voluptatem!</div>
+			</div>
+
+		</div>	
+
+	</div>
+
+	<!-- css.app.min -->
+	<!--<link rel="stylesheet" href="">-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- url para cargar de fuentes -->
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+	<script>
+		// Carga Asincronica de fuentes
+		WebFont.load({
+			google: {
+				families: ['Noto Sans', 'Raleway']
+		 	}
+		 });
+	</script>
+
+	<script src="https://unpkg.com/vue"></script>
+
+</body>
+</html>
