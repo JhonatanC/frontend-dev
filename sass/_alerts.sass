@@ -1,40 +1,42 @@
-@mixin alerts($rgb,$alpha)
-	background : rgba($rgb,$alpha)
-	border : 1px solid rgba($rgb,$alpha)
+.alert
 	border-radius: 3px
-	color : $rgb
 	font-weight : bold
 	padding: .6em 1em
 	width: 100%
 
+@mixin alerts($rgb,$alpha,$color)
+	background : rgba($rgb,$alpha)
+	border : 1px solid rgba($rgb,$alpha)
+	color : $color
 
-.alert-mint-green
-	@include alerts($mint-green,.2)
+.alert-danger
+	@include alerts($color-danger-inside,.2, $color-danger-outside)
 
-.alert-dark-green
-	@include alerts($dark-green,.2)
+.alert-warning
+	@include alerts($color-warning-inside,.2, $color-warning-outside)
 
-.alert-light-green
-	@include alerts($light-green,.2)
+.alert-info
+	@include alerts($color-info-inside,.2, $color-info-outside)
 
-.alert-green
-	@include alerts($green,.2)
+.alert-success
+	@include alerts($color-success-inside,.2, $color-success-outside)
 
-.alert-sky-blue
-	@include alerts($sky-blue,.2)
 
-.alert-navy-blue
-	@include alerts($navy-blue,.2)
+@mixin alerts-outline($rgb,$alpha)
+	background : transparent
+	border : 1px solid rgba($rgb,$alpha)
+	color : $rgb
 
-.alert-light-purple
-	@include alerts($light-purple,.2)
+.alert-danger-outline
+	@include alerts-outline($color-danger-inside,.5)
 
-.alert-purple
-	@include alerts($purple,.2)
+.alert-warning-outline
+	@include alerts-outline($color-warning-inside,.5)
+	border : 1px solid rgba($color-warning-outside,.5)
+	color: $color-warning-outside !important
 
-.alert-wet-asphalt
-	@include alerts($wet-asphalt,.2)
+.alert-info-outline
+	@include alerts-outline($color-info-inside,.5)
 
-.alert-dark-blue
-	@include alerts($dark-blue,.2)
-
+.alert-success-outline
+	@include alerts-outline($color-success-inside,.5)

@@ -1,133 +1,76 @@
-@mixin btn($background,$border,$color)
-	background: $background
+.btn
 	border-radius: 4px
-	border: 1px solid $border
-	color: $color
 	cursor: pointer
 	font-size: 16px
 	font-weight: bold
 	margin: .3em 0em
 	padding: .6em 1em
+
+@mixin button($background,$border,$color)
+	background: $background
+	border: 1px solid $border
+	color: $color
 
 @mixin textShadow($x,$y,$color)
 	text-shadow: $x $y $color
 
-.btn-green-d
-	@include btn($mint-green,$dark-green,$clouds)
-	@include textShadow(1px, 1px, $dark-green)
+.btn-default
+	@include button($color-default-inside,$color-default-outside,#8d9194)
+	@include textShadow(1px, 1px, transparent)
 	&:hover
-		@include btn($dark-green,$mint-green,$clouds)
+		@include button($color-default-outside,$color-default-inside,$color-default-inside)
 
-.btn-green-l
-	@include btn($light-green,$green,$clouds)
-	@include textShadow(1px, 1px, $green)
+.btn-danger
+	@include button($color-danger-inside,$color-danger-outside,$color-white)
+	@include textShadow(1px, 1px, $color-danger-outside)
 	&:hover
-		@include btn($green,$light-green,$clouds)
+		@include button($color-danger-outside,$color-danger-inside,$color-white)
 
-.btn-blue
-	@include btn($sky-blue,$navy-blue,$clouds)
-	@include textShadow(1px, 1px, $navy-blue)
+.btn-warning
+	@include button($color-warning-inside,$color-warning-outside,$color-white)
+	@include textShadow(1px, 1px, $color-warning-outside)
 	&:hover
-		@include btn($navy-blue,$sky-blue,$clouds)
+		@include button($color-warning-outside,$color-warning-inside,$color-white)
 
-.btn-purple
-	@include btn($light-purple,$purple,$clouds)
-	@include textShadow(1px, 1px, $purple)
+.btn-info
+	@include button($color-info-inside,$color-info-outside,$color-white)
+	@include textShadow(1px, 1px, $color-info-outside)
 	&:hover
-		@include btn($purple,$light-purple,$clouds)
+		@include button($color-info-outside,$color-info-inside,$color-white)
 
-.btn-asphalt
-	@include btn($wet-asphalt,$dark-blue,$clouds)
+.btn-success
+	@include button($color-success-inside,$color-success-outside,$color-white)
+	@include textShadow(1px, 1px, $color-success-outside)
 	&:hover
-		@include btn($dark-blue,$wet-asphalt,$clouds)
+		@include button($color-success-outside,$color-success-inside,$color-white)
 
-.btn-yellow
-	@include btn($yellow,$orange,$clouds)
-	@include textShadow(1px, 1px, $orange)
+
+@mixin button-outline($border,$color)
+	background: transparent
+	border: 1px solid $border
+	color: $color
+
+.btn-default-outline
+	@include button-outline($color-default-outside,#8d9194)
 	&:hover
-		@include btn($orange,$yellow,$clouds)
+		@include button($color-default-outside,$color-default-inside,$color-default-inside)
 
-.btn-carrot
-	@include btn($carrot,$dark-orange,$clouds)
+.btn-danger-outline
+	@include button-outline($color-danger-outside,$color-danger-outside)
 	&:hover
-		@include btn($dark-orange,$carrot,$clouds)
+		@include button($color-danger-outside,$color-danger-inside,$color-white)
 
-.btn-red
-	@include btn($red,$dark-red,$clouds)
+.btn-warning-outline
+	@include button-outline($color-warning-outside,$color-warning-outside)
 	&:hover
-		@include btn($dark-red,$red,$clouds)
+		@include button($color-warning-outside,$color-warning-inside,$color-white)
 
-.btn-clouds
-	@include btn($clouds,$silver,$grey)
+.btn-info-outline
+	@include button-outline($color-info-outside,$color-info-outside)
 	&:hover
-		@include btn($silver,$clouds,$clouds)
+		@include button($color-info-outside,$color-info-inside,$color-white)
 
-.btn-grey
-	@include btn($grey,$dark-grey,$clouds)
+.btn-success-outline
+	@include button-outline($color-success-outside,$color-success-outside)
 	&:hover
-		@include btn($dark-grey,$grey,$clouds)
-
-
-// Btn outline
-.btn-out-green-d
-	@include btn(transparent,$dark-green,$dark-green)
-	&:hover
-		@include btn($dark-green,$dark-green,$clouds)
-
-.btn-out-green-l
-	@include btn(transparent,$green,$green)
-	&:hover
-		@include btn($green,$dark-green,$clouds)
-
-
-
-@mixin btn-gradient($primary,$secundary)
-	background : $primary
-	background: -moz-linear-gradient(-45deg, $primary 0%, $secundary 100%)
-	background: -webkit-linear-gradient(-45deg, $primary 0%,$secundary 100%)
-	background: linear-gradient(135deg, $primary 0%,$secundary 100%)
-	border-radius: 4px
-	border: 1px solid #ffffff
-	color: #ffffff
-	cursor: pointer
-	font-size: 16px
-	font-weight: bold
-	margin: .3em 0em
-	padding: .6em 1em
-
-.btn-g-green-d
-	@include btn-gradient($mint-green,$dark-green)
-
-.btn-g-green-l
-	@include btn-gradient($light-green,$green)
-
-.btn-g-blue
-	@include btn-gradient($sky-blue,$navy-blue)
-
-.btn-g-purple
-	@include btn-gradient($light-purple,$purple)
-
-.btn-g-asphalt
-	@include btn-gradient($wet-asphalt,$dark-blue)
-
-.btn-g-yellow
-	@include btn-gradient($yellow,$orange)
-
-.btn-g-carrot
-	@include btn-gradient($carrot,$dark-orange)
-
-.btn-g-clouds
-	@include btn-gradient($clouds,$silver)
-
-.btn-g-red
-	@include btn-gradient($red,$dark-red)
-
-.btn-g-grey
-	@include btn-gradient($grey,$dark-grey)
-
-// background: rgb(26,188,153)
-// background: -moz-linear-gradient(-45deg, rgb(26,188,153) 0%, rgb(22,160,133) 100%)
-// background: -webkit-linear-gradient(-45deg, rgb(26,188,153) 0%,rgb(22,160,133) 100%)
-// background: linear-gradient(135deg, rgb(26,188,153) 0%,rgb(22,160,133) 100%)
-// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1abc99', endColorstr='#16a085',GradientType=1 )
-
+		@include button($color-success-outside,$color-success-inside,$color-white)
