@@ -8,7 +8,8 @@
 	width: 100%
 
 /* Fila */
-.row
+.row,
+.row-reverse
 	display: flex
 	flex-wrap: wrap
 	position: relative
@@ -31,6 +32,8 @@
 		width: 95%
 	.row
 		flex-direction: column
+	.row-reverse
+		flex-direction: column-reverse
 	/*Tamaño de columnas*/
 	.sm-1
 		width: 8.333333333333333%
@@ -838,6 +841,8 @@
 		width: 95%
 	.row
 		flex-direction: row
+	.row-reverse
+		flex-direction: row-reverse
 	/*Tamaño de columnas*/
 	.md-1
 		width: 8.333333333333333%
