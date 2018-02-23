@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Menú</title>
+	<link rel="stylesheet" href="css/navegacion.css">
+</head>
+<body>
+	<header>
+	  <section class="_heaer-container">
+
+	      <a href="#">
+	        <img src="" alt="">
+	      </a>
+
+	      <div class="mobile-menu">
+	        <a id="user" href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+	        <a id="btn-nav" href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+	      </div>
+
+	      <nav>
+	        <div class="desktop-menu">
+	          <ul class="menu">
+	            <li><a href="#">Inicio</a></li>
+	            <li>
+	              <a href="#">Lenguajes <i class="fa fa-caret-down" aria-hidden="true"></i> </a>
+	              <ul>
+	                <li class="sub-menu">
+	                  <a href="#">Frontend</a>
+	                  <ul>
+	                    <li><a href="#">Html 5</a></li>
+	                    <li><a href="#">Css 3</a></li>
+	                    <li><a href="#">Javascript</a></li>
+	                  </ul>
+	                </li>
+	                <li class="sub-menu">
+	                  <a href="#">Backend</a>
+	                  <ul>
+	                    <li><a href="#">PHP</a></li>
+	                    <li><a href="#">MySQL</a></li>
+	                  </ul>
+	                </li>
+	              </ul>
+	            </li>
+	            <li><a href="#">Blog</a></li>
+	            <li><a href="#">Contacto</a></li>
+	          </ul>
+	          <ul class="acount">
+	            <li><a href="#">Iniciar Sesión</a></li>
+	            <li><a href="#">Crear Cuenta</a></li>
+	          </ul>
+	        </div>
+	      </nav>
+
+	  </section>
+	</header>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/nav-mobile.js"></script>
+
+	<!-- url para cargar de fuentes -->
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+	<script>
+		// Carga Asincronica de fuentes
+		WebFont.load({
+			google: {
+				families: ['Noto Sans', 'Raleway']
+		 	}
+		 });
+	</script>
+</body>
+</html>
