@@ -8,7 +8,20 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/slidershow.css">
 	<style>
-		.profile-twitter{ text-decoration: none; color: #4197d0; }
+		.profile-twitter{ text-decoration: none; color: #4197d0; } 
+		.profile-github{ text-decoration: none; color: #e69b63; }
+		#content{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.f-grow{
+			flex-grow: 1;
+		}
+		.box-h{
+			border: 1px solid #c7c7c7;
+			min-height: 300px;
+			height: auto;
+		}
 	</style>
 </head>
 <body>
@@ -57,9 +70,26 @@
 		</div>
 	</header>
 
+	<div id="content">
+		<div class="box-1 column box-example f-grow">
+			Lorem ipsum dolor sit amet.
+		</div>
+		<div class="box-2 column box-example f-grow">
+			Lorem ipsum dolor sit amet.
+		</div>
+		<div class="box-3 column box-example f-grow">
+			Lorem ipsum dolor sit amet.
+		</div>
+	</div>
+
 	<div class="container">
 		<div class="row">
-			<h2 class="text-center">Sistema de Grid</h2>
+			<div class="sm-12">
+				<h2 class="text-center">Sistema de Grid</h2> <br>
+			</div>
+			<div class="sm-12">
+				<h3>Tamaños con anchos definidos</h3>
+			</div>
 		</div>
 
 		<div class="row sm-mtb-1">
@@ -84,6 +114,13 @@
 
 		<div class="row sm-mtb-1">
 			<div class="column sm-12 md-12 box-example">...</div>
+		</div>
+
+		<div class="row sm-mtb-1 box-h sm-justify-center sm-align-center">
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
 		</div>
 
 		<div class="row sm-mtb-1">
@@ -133,14 +170,20 @@
 		<div class="row sm-mtb-1">
 			<div class="row sm-justify-around">
 				<div class="sm-12 lg-12"><h2>Cards</h2></div>
-				<div class="column sm-12 md-4 box-example card">
-					<img src="http://via.placeholder.com/800x400" alt="">
+				<div class="column sm-12 md-4 card">
+					<img src="http://via.placeholder.com/1200x900" alt="">
 					<h2>Title Image</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veritatis doloremque, quisquam, itaque veniam nemo quis hic explicabo rerum, ipsa, animi magnam autem in fugit excepturi obcaecati. Aliquid, velit! Quos.</p>
 					<button class="btn btn-info">Button</button>
 				</div>
-				<div class="column sm-12 md-4 box-example card">
-					<img src="http://via.placeholder.com/800x400" alt="">
+				<div class="column sm-12 md-4 card">
+					<img src="http://via.placeholder.com/1200x900" alt="">
+					<h2>Title Image</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veritatis doloremque, quisquam, itaque veniam nemo quis hic explicabo rerum, ipsa, animi magnam autem in fugit excepturi obcaecati. Aliquid, velit! Quos.</p>
+					<button class="btn btn-info">Button</button>
+				</div>
+				<div class="column sm-12 md-4 card">
+					<img src="http://via.placeholder.com/1200x900" alt="">
 					<h2>Title Image</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veritatis doloremque, quisquam, itaque veniam nemo quis hic explicabo rerum, ipsa, animi magnam autem in fugit excepturi obcaecati. Aliquid, velit! Quos.</p>
 					<button class="btn btn-info">Button</button>
@@ -160,7 +203,7 @@
 	-->
 
 	<footer class="sm-mt-2">
-		<h5>create by <a class="profile-twitter" href="https://twitter.com/jhonatandev" target="_blank">@jhonatandev</a></h5>
+		<h5>create by <a class="profile-twitter" href="https://twitter.com/jhonatandev" target="_blank">@jhonatandev</a> - repositorio <a class="profile-github" href="https://github.com/JhonatanC/frontend-dev" target="_blank">Github</a></h5>
 	</footer>
 
 	<!-- css.app.min -->
