@@ -3,115 +3,165 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Frontend - Dev</title>
+	<title>Css Code</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/slidershow.css">
-	<!--<style></style>-->
+	<style>
+		.profile-twitter{ text-decoration: none; color: #4197d0; }
+	</style>
 </head>
 <body>
 
-	<header>
+	<header class="header">
 		<div class="container">
-			<div class="row sm-justify-between">
-				<h1>Frontend - Dev</h1>
+			<div class="row sm-justify-between sm-align-items">
+
+				<h1>Css Code</h1>
 
 				<button id="nav-button" class="nav-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
 
-				<nav id="menu">
-					<ul>
-						<li><a class="active" href="index.html">Inicio</a></li>
-						<li><a href="rejillas.html">Rejillas</a></li>
-						<li><a href="componentes.html">Componentes</a></li>
+				<nav>
+					<ul class="menu">
+						<li><a href="index.html">Inicio</a></li>
+						<li>
+							<a href="#">Rejillas</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">Aladdin Dragon Fenix</a>
+									<ul class="sub-menu">
+										<li><a href="#">Aladdin Terminal de Transporte</a></li>
+										<li><a href="#">Item Link</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Item Link</a>
+									<ul class="sub-menu">
+										<li><a href="#">Item Link</a></li>
+										<li><a href="#">Item Link</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Item Link</a>
+									<ul class="sub-menu">
+										<li><a href="#">Item Link</a></li>
+										<li><a href="#">Item Link</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">Contacto</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 	</header>
 
-	<div class="alert alert-warning">
-		<p class="text-center">Esto es una versión de prueba, por ende hay fragmento de textos incompletos y faltan implementar clases con sus respectivas funcionalidad.</p>
-	</div>
+	<div class="container">
+		<div class="row">
+			<h2 class="text-center">Sistema de Grid</h2>
+		</div>
 
-	<div id="app">
+		<div class="row sm-mtb-1">
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+			<div class="column sm-12 md-3 lg-1 box-example">...</div>
+		</div>
 
-		<div class="container">
+		<div class="row sm-mtb-1">
+			<div class="column sm-12 md-6 box-example">...</div>
+			<div class="column sm-12 md-6 box-example">...</div>
+		</div>
 
-			<div class="row sm-mtb-1">
-				<div class="col sm-12">
-					<h2 class="text-center">¿Qué es Frontend - Dev?</h2>
-					<p>¡Hola! Antes que nada permíteme presentarme, soy <a class="arroba" href="https://twitter.com/jhonatandev" target="_blank">@jhonatandev</a> un desarrollador web en constante aprendimiento de las muchas tecnologías que día a día salen en este medio de la programación, con conocimiento en diferentes técnologías como <strong>PHP (Laravel, Wordpress), MySQL</strong> </p>
-					<p>Frontend - Dev, es una librería que incorpora tecnologías como <strong>css, javascript, jQuery y VueJs</strong>, con la intención de agilizar el trabajo de los desarrolladores</p>
-					<p>La idea de este proyecto es que sea <strong>100% colaborativo</strong>, siéntente libre de explorar, opinar y sugerir cambios que aporten a este trabajo.</p>
-					<p>Quiero mostrarte lo fácil que es máquetar con esta pequeña librería en el siguiente ejempo:</p>
-				</div>
-			</div>
+		<div class="row sm-mtb-1">
+			<div class="column sm-12 md-12 box-example">...</div>
+		</div>
 
-			<div class="structure-example">
-				<header class="sm-plr-1-5">
-					<div class="row sm-justify-between">
-						<h1>Tú logo</h1>
-
-						<!---<button id="nav-button" class="nav-button"><i class="fa fa-bars" aria-hidden="true"></i></button>-->
-
-						<nav id="menu">
-							<ul>
-								<li><a class="active" href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-							</ul>
-						</nav>
-					</div>
-				</header>
-
-				<section class="banner-main">
-					<img src="img/image-3.jpg" width="100%" alt="">
-				</section>
-
-				<div class="row sm-mtb-1">
-					<div class="sm-12">
-						<h2 class="text-center">Lorem ipsum dolor</h2>
-					</div>
-
-					<div class="sm-12 md-4 column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat velit et, laboriosam nobis non sit, molestias id, autem inventore sed aperiam optio tenetur. Delectus hic enim libero, nobis laborum quisquam.</div>
-					<div class="sm-12 md-4 column">Inventore doloribus commodi tempore rerum ut est. Ex nihil, dolorem repudiandae blanditiis eius numquam alias molestiae, doloremque, facere quas accusamus ipsum hic minima provident. Quidem excepturi officia impedit asperiores fugit.</div>
-					<div class="sm-12 md-4 column">Aut officiis atque incidunt laborum, adipisci ab earum, ipsum maiores minus, dicta dolorum est blanditiis assumenda sequi voluptas sapiente quasi vel, hic fugit. Quo, minus! Et ipsum dolore, nemo natus?</div>
-				</div>
-
-				<div class="row sm-mtb-0-5 comments">
-					<div class="sm-12">
+		<div class="row sm-mtb-1">
+			<div class="md-12">
+				<div class="row sm-justify-between">
+					<div class="sm-12 md-5">
 						<div class="row">
-							<div class="sm-12 md-4 column"><img src="img/image-3.jpg" width="100%" alt=""></div>
-							<div class="sm-12 md-8 column">
-								<h2>Lorem ipsum dolor</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam illo, beatae maiores non aut voluptatum tenetur quibusdam cum architecto fuga commodi fugiat, doloremque unde, nulla soluta incidunt saepe facere minus!</p>
-								<button class="btn btn-danger">Ver más</button>
+							<div class="sm-12 lg-12"><h2>Botones</h2></div>
+							<div class="column sm-12 md-6 box-example">
+								<button class="btn btn-default">Button</button>
+								<button class="btn btn-info">Button</button>
+								<button class="btn btn-warning">Button</button>
+								<button class="btn btn-danger">Button</button>
+								<button class="btn btn-success">Button</button>
 							</div>
-
-							<div class="sm-12 md-4 column"><img src="img/image-2.jpg" width="100%" alt=""></div>
-							<div class="sm-12 md-8 column">
-								<h2>Lorem ipsum dolor</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam illo, beatae maiores non aut voluptatum tenetur quibusdam cum architecto fuga commodi fugiat, doloremque unde, nulla soluta incidunt saepe facere minus!</p>
-								<button class="btn btn-danger-outline">Ver más</button>
+							<div class="column sm-12 md-6 box-example">
+								<button class="btn btn-default-outline">Button</button>
+								<button class="btn btn-info-outline">Button</button>
+								<button class="btn btn-warning-outline">Button</button>
+								<button class="btn btn-danger-outline">Button</button>
+								<button class="btn btn-success-outline">Button</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="sm-12 md-6">
+						<div class="row">
+							<div class="sm-12 lg-12"><h2>Alertas</h2></div>
+							<div class="column sm-12 md-6 box-example">
+								<div class="alert alert-danger">Danger</div>
+								<div class="alert alert-warning">Warning</div>
+								<div class="alert alert-info">Info</div>
+								<div class="alert alert-success">Éxito</div>
+							</div>
+							<div class="column sm-12 md-6 box-example">
+								<div class="alert alert-danger-outline">Danger</div>
+								<div class="alert alert-warning-outline">Warning</div>
+								<div class="alert alert-info-outline">Info</div>
+								<div class="alert alert-success-outline">Éxito</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
 
-				<div class="row sm-mb-2">
-					<div class="sm-12"><h2 class="text-center sm-mtb-0-5">Lorem ipsum dolor</h2></div>
-					<div class="sm-12 md-4"><img src="img/image-1.jpg" alt=""></div>
-					<div class="sm-12 md-4"><img src="img/image-2.jpg" alt=""></div>
-					<div class="sm-12 md-4"><img src="img/image-3.jpg" alt=""></div>
-					<div class="sm-12 md-4"><img src="img/image-3.jpg" alt=""></div>
-					<div class="sm-12 md-4"><img src="img/image-1.jpg" alt=""></div>
-					<div class="sm-12 md-4"><img src="img/image-2.jpg" alt=""></div>
+		<div class="row sm-mtb-1">
+			<div class="row sm-justify-around">
+				<div class="sm-12 lg-12"><h2>Cards</h2></div>
+				<div class="column sm-12 md-4 box-example card">
+					<img src="http://via.placeholder.com/800x400" alt="">
+					<h2>Title Image</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veritatis doloremque, quisquam, itaque veniam nemo quis hic explicabo rerum, ipsa, animi magnam autem in fugit excepturi obcaecati. Aliquid, velit! Quos.</p>
+					<button class="btn btn-info">Button</button>
+				</div>
+				<div class="column sm-12 md-4 box-example card">
+					<img src="http://via.placeholder.com/800x400" alt="">
+					<h2>Title Image</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veritatis doloremque, quisquam, itaque veniam nemo quis hic explicabo rerum, ipsa, animi magnam autem in fugit excepturi obcaecati. Aliquid, velit! Quos.</p>
+					<button class="btn btn-info">Button</button>
 				</div>
 			</div>
-
-		</div>	
+		</div>
 
 	</div>
+
+	<!--
+		== BLOQUE DE CÓDIGO PARA USAR VUE.JS ==
+		<div id="app">
+			<div class="container">
+			<div class="row"></div>
+			</div>	
+		</div>
+	-->
+
+	<footer class="sm-mt-2">
+		<h5>create by <a class="profile-twitter" href="https://twitter.com/jhonatandev" target="_blank">@jhonatandev</a></h5>
+	</footer>
 
 	<!-- css.app.min -->
 
@@ -122,10 +172,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 
 	<!--vuejs -->
-	<script src="https://unpkg.com/vue"></script>
+	<!--<script src="https://unpkg.com/vue"></script>-->
 
-	<!--slidershow -->
-	<script src="js/slideshow.js"></script>
+	<!--navegacion móvil -->
+	<script src="js/mobile-nav.js"></script>
 
 	<script>
 		// Carga Asincronica de fuentes

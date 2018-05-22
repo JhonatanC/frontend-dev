@@ -1,89 +1,124 @@
-.header-default
-	background : #fff
-	border: 1px solid #d2d2d2
+#nav-button
+	display: none
 
 header
-	background: #151515
-	color: #fff
+	background: #145b8a
+	h1 
+		color: #fff
+.menu
+	display: flex
+
+.menu li.current-menu-item
+	background: #1f5c84
+	border-bottom: 2px solid red
+
+.menu li > ul
+	display: none
+
+.menu li:hover > ul.sub-menu
+	display: block
+
+.menu li ul
+	background: #0066cc
+	position: absolute
+	width: 14%
+	z-index: 9999
+
+.menu li ul li
+	position: relative
+
+.menu li ul li ul
+	top: 0
+	left: 100%
 	width: 100%
 
-header a
+.menu li a
 	color: #fff
+	display: block
+	padding: 1.2em .5em
+	text-decoration: none
 
-header a.active
-	background: transparent
-	border-bottom: 3px solid red
-	color: #ffc000
+.menu li a:hover
+	background: #10486d
 
-.brand
-	background: #a91818
-	border-radius: 50%
-	height: 60px
-	width: 60px
+.menu li a.active
+	background: #0066cc
 
-.menu
+#nav-button
+	background: #fff
+	border-radius: 5px
+	height: 30px
 	position: absolute
+	right: 1em
+	top: .5em
+	width: 30px
 
-#menu
-	display: flex
-	justify-content: space-between
-	ul
-		display: flex
-		li
-			position: relative
-			a
-				display: block
-				padding: 15px 8px
-				text-decoration: none
-		li > ul
-			display: none
-			position: absolute
+@media (min-width: 992px)
+	.menu li:hover > ul.sub-menu
+		display: block !important
 
+@media (max-width: 991px)
+	header
+		position: relative
 
+	header .container
+		margin: 0
+		width: 100%
 
+	header .container .row
+		padding: 0px 20px
 
-@media (min-width: 769px)
-	.nav-button
-		display: none
-	#menu
-		display: flex !important
-
-
-
-
-
-
-@media (max-width: 768px)
-	#menu
-		display: none
-		flex-direction: column
-		ul
-			display: block
-			width: 100%
-			li
-				text-align: center
-				border-bottom: 1px solid rgba(199, 199, 199, 0.2)
-				width: 100%
-				a
-					padding: 15px 0px
-	#nav-mobile
-		color: #333333
-		font-size: 1.4em
-		position: absolute
-		top: 0.7em
-		right: 1em
-	.nav-button
+	#nav-button
 		background: transparent
-		border-radius: 4px
-		border: 1px solid #bdc3c7
-		color: #2c3e50
-		font-size: 18px
-		padding: .3em .6em
-		position: absolute
-		top: 1em
-		right: .4em
+		color: #fff
+		display: block !important
+		font-size: 24px
 
-	.showMenu
-		display: flex !important
+	.menu
+		background: #0066cc
+		bottom: 0
+		display: block
+		height: 100vh
+		left: 100%
+		min-height: 100vh
+		opacity: 0.8
+		overflow: hidden
+		position: absolute
+		right: 0
+		top: 58px
+		transition: 0.5s
+		z-index: 10
+
+	.show
+		background: #0066cc
+		bottom: 0
+		display: block
+		height: 100vh
+		left: 20%
+		min-height: 100vh
+		opacity: 1
+		overflow: visible
+		position: absolute
+		right: 0
+		top: 58px
+		z-index: 10
+
+	.menu li > ul
+		display: none
+		padding-left: 20px
+
+	.menu li ul li ul
+		left: 0%
+
+	.sub-menu-mobile
+		padding-left: 30px
+
+	.menu li ul
+		background: #0066cc
+		position: relative
+		width: 100%
+
+	.menu li:hover > ul.sub-menu
+		display: none
 
 

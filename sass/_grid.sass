@@ -12,8 +12,12 @@
 .row-reverse
 	display: flex
 	flex-wrap: wrap
+	flex-direction: row
 	position: relative
 	width: 100%
+
+.row-reverse
+	flex-direction: row-reverse
 
 /*Agrega un padding a la izquerda y derecha entre columnas */
 .col
@@ -834,6 +838,9 @@
 		justify-content: space-between
 	.sm-justify-around
 		justify-content: space-around
+	/*Alinteando items*/
+	.sm-align-items
+		align-items: center
 
 /*Medida columnas para tablet - md*/
 @media screen and (min-width: 768px)
@@ -2524,5 +2531,3 @@
 	.md-only-push-12
 		margin-left: 100%
 
-
-/* ¡PENDIENTE! Generar clases order */
