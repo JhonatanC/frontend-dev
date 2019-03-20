@@ -19,15 +19,14 @@
 .alert-info
 	@include alerts($color-info-inside,.2, $color-info-outside)
 
-.alert-success
+.alert-success-j
 	@include alerts($color-success-inside,.2, $color-success-outside)
-
 
 @mixin alerts-outline($rgb,$alpha)
 	background : transparent
 	border : 1px solid rgba($rgb,$alpha)
-	color : $rgb
-
+	color : $rgb 
+ 
 .alert-danger-outline
 	@include alerts-outline($color-danger-inside,.5)
 

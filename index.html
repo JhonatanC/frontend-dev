@@ -36,7 +36,7 @@
 
 				<nav>
 					<ul class="menu">
-						<li><a href="index.html">Inicio</a></li>
+						<li class="current-menu-item"><a href="index.html">Inicio</a></li>
 						<li>
 							<a href="#">Rejillas</a>
 							<ul class="sub-menu">
@@ -51,7 +51,12 @@
 									<a href="#">Item Link</a>
 									<ul class="sub-menu">
 										<li><a href="#">Item Link</a></li>
-										<li><a href="#">Item Link</a></li>
+										<li>
+											<a href="#">Item Link</a>
+											<ul class="sub-menu">
+												<li><a href="#">Item Link</a></li>
+											</ul>
+										</li>
 									</ul>
 								</li>
 								<li>
@@ -70,61 +75,34 @@
 		</div>
 	</header>
 
-	<div id="content">
-		<div class="box-1 column box-example f-grow">
-			Lorem ipsum dolor sit amet.
-		</div>
-		<div class="box-2 column box-example f-grow">
-			Lorem ipsum dolor sit amet.
-		</div>
-		<div class="box-3 column box-example f-grow">
-			Lorem ipsum dolor sit amet.
+	<div id="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="column sm-12 md-6 lg-8 box-example">
+					<img src="img/image-2.jpg" alt="">
+				</div>
+				<div class="column sm-12 md-6 lg-4 box-example">
+					<h2>Lorem ipsum dolor</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum sunt, nostrum, nulla voluptatibus, repellendus mollitia dignissimos vero incidunt deserunt a cupiditate. Eligendi eius voluptatum corporis odio? Soluta culpa perferendis ipsam.
+					<button class="btn btn-danger-outline">Button</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column sm-12 md-6 lg-8 box-example">
+					<img src="img/image-3.jpg" alt="">
+				</div>
+				<div class="column sm-12 md-6 lg-4 box-example">
+					<h2>Lorem ipsum dolor</h2>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum sunt, nostrum, nulla voluptatibus, repellendus mollitia dignissimos vero incidunt deserunt a cupiditate. Eligendi eius voluptatum corporis odio? Soluta culpa perferendis ipsam.
+					<button class="btn btn-danger-outline">Button</button>
+				</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="sm-12">
-				<h2 class="text-center">Sistema de Grid</h2> <br>
-			</div>
-			<div class="sm-12">
-				<h3>Tamaños con anchos definidos</h3>
-			</div>
-		</div>
-
-		<div class="row sm-mtb-1">
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-		</div>
-
-		<div class="row sm-mtb-1">
-			<div class="column sm-12 md-6 box-example">...</div>
-			<div class="column sm-12 md-6 box-example">...</div>
-		</div>
-
-		<div class="row sm-mtb-1">
-			<div class="column sm-12 md-12 box-example">...</div>
-		</div>
-
-		<div class="row sm-mtb-1 box-h sm-justify-center sm-align-center">
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-			<div class="column sm-12 md-3 lg-1 box-example">...</div>
-		</div>
-
-		<div class="row sm-mtb-1">
-			<div class="md-12">
+	<!--
+	<div class="row">
+		<div class="md-12">
 				<div class="row sm-justify-between">
 					<div class="sm-12 md-5">
 						<div class="row">
@@ -167,7 +145,7 @@
 			</div>
 		</div>
 
-		<div class="row sm-mtb-1">
+		<div class="row">
 			<div class="row sm-justify-around">
 				<div class="sm-12 lg-12"><h2>Cards</h2></div>
 				<div class="column sm-12 md-4 card">
@@ -192,14 +170,6 @@
 		</div>
 
 	</div>
-
-	<!--
-		== BLOQUE DE CÓDIGO PARA USAR VUE.JS ==
-		<div id="app">
-			<div class="container">
-			<div class="row"></div>
-			</div>	
-		</div>
 	-->
 
 	<footer class="sm-mt-2">

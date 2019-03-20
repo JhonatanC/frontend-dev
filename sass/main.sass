@@ -20,12 +20,9 @@ html, body
 	color: $color-paragraph
 	font-family: $font-paragraph
 	font-size: 100%
-	height: 100vh
+	height: 100%
 	width: 100%
 
-body
-	.container
-		min-height: 100%
 hr
 	border: 1px solid #f1f1f1
 	margin: 1em 0em
@@ -48,8 +45,17 @@ p
 footer
 	background: #191919
 	color: #fff
+	margin-top: 2em
 	padding: .5em 0em
 	text-align: center
+
+header, .header,
+footer, .footer
+	flex-grow: 1
+
+#wrapper
+	flex-grow: 2
+	min-height: 100%
 
 .box-example
 	background: #fff
@@ -68,3 +74,16 @@ footer
 
 .structure-example .comments
 	background: #fff
+
+/*Efecto para imágenes*/
+.ef-img-scale
+	overflow: hidden
+
+.ef-img-scale img
+	transform: scale(1)
+	transition: all .5s ease
+
+.ef-img-scale:hover img
+	transform: scale(1.5)
+	transition: all .5s ease
+	
