@@ -14,9 +14,6 @@
 			display: flex;
 			flex-wrap: wrap;
 		}
-		.f-grow{
-			flex-grow: 1;
-		}
 		.box-h{
 			border: 1px solid #c7c7c7;
 			min-height: 300px;
@@ -28,7 +25,7 @@
 
 	<header class="header">
 		<div class="container">
-			<div class="row sm-justify-between sm-align-items">
+			<div class="flex row sm-align-center sm-justify-between">
 
 				<h1>Css Code</h1>
 
@@ -38,32 +35,13 @@
 					<ul class="menu">
 						<li class="current-menu-item"><a href="index.html">Inicio</a></li>
 						<li>
-							<a href="#">Rejillas</a>
+							<a href="#">Servicios</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="#">Aladdin Dragon Fenix</a>
+									<a href="#">Servicio 1</a>
 									<ul class="sub-menu">
-										<li><a href="#">Aladdin Terminal de Transporte</a></li>
-										<li><a href="#">Item Link</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Item Link</a>
-									<ul class="sub-menu">
-										<li><a href="#">Item Link</a></li>
-										<li>
-											<a href="#">Item Link</a>
-											<ul class="sub-menu">
-												<li><a href="#">Item Link</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Item Link</a>
-									<ul class="sub-menu">
-										<li><a href="#">Item Link</a></li>
-										<li><a href="#">Item Link</a></li>
+										<li><a href="#">Servicio 1.1</a></li>
+										<li><a href="#">Servicio 1.2</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -77,100 +55,16 @@
 
 	<div id="wrapper">
 		<div class="container">
-			<div class="row">
-				<div class="column sm-12 md-6 lg-8 box-example">
-					<img src="img/image-2.jpg" alt="">
-				</div>
-				<div class="column sm-12 md-6 lg-4 box-example">
-					<h2>Lorem ipsum dolor</h2>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum sunt, nostrum, nulla voluptatibus, repellendus mollitia dignissimos vero incidunt deserunt a cupiditate. Eligendi eius voluptatum corporis odio? Soluta culpa perferendis ipsam.
-					<button class="btn btn-danger-outline">Button</button>
-				</div>
-			</div>
-			<div class="row">
-				<div class="column sm-12 md-6 lg-8 box-example">
-					<img src="img/image-3.jpg" alt="">
-				</div>
-				<div class="column sm-12 md-6 lg-4 box-example">
-					<h2>Lorem ipsum dolor</h2>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum sunt, nostrum, nulla voluptatibus, repellendus mollitia dignissimos vero incidunt deserunt a cupiditate. Eligendi eius voluptatum corporis odio? Soluta culpa perferendis ipsam.
-					<button class="btn btn-danger-outline">Button</button>
-				</div>
+		
+			<h2 class="text-center">medida-f-grow-valor: sm-f-grow-1</h2>
+
+			<div class="flex row">
+				<div class="sm-f-grow-1 text-center box-example">lorem</div>
+				<div class="sm-f-grow-1 text-center box-example">lorem</div>
+				<div class="sm-f-grow-3 text-center box-example">lorem</div>
 			</div>
 		</div>
 	</div>
-
-	<!--
-	<div class="row">
-		<div class="md-12">
-				<div class="row sm-justify-between">
-					<div class="sm-12 md-5">
-						<div class="row">
-							<div class="sm-12 lg-12"><h2>Botones</h2></div>
-							<div class="column sm-12 md-6 box-example">
-								<button class="btn btn-default">Button</button>
-								<button class="btn btn-info">Button</button>
-								<button class="btn btn-warning">Button</button>
-								<button class="btn btn-danger">Button</button>
-								<button class="btn btn-success">Button</button>
-							</div>
-							<div class="column sm-12 md-6 box-example">
-								<button class="btn btn-default-outline">Button</button>
-								<button class="btn btn-info-outline">Button</button>
-								<button class="btn btn-warning-outline">Button</button>
-								<button class="btn btn-danger-outline">Button</button>
-								<button class="btn btn-success-outline">Button</button>
-							</div>
-						</div>
-					</div>
-					
-					<div class="sm-12 md-6">
-						<div class="row">
-							<div class="sm-12 lg-12"><h2>Alertas</h2></div>
-							<div class="column sm-12 md-6 box-example">
-								<div class="alert alert-danger">Danger</div>
-								<div class="alert alert-warning">Warning</div>
-								<div class="alert alert-info">Info</div>
-								<div class="alert alert-success">Éxito</div>
-							</div>
-							<div class="column sm-12 md-6 box-example">
-								<div class="alert alert-danger-outline">Danger</div>
-								<div class="alert alert-warning-outline">Warning</div>
-								<div class="alert alert-info-outline">Info</div>
-								<div class="alert alert-success-outline">Éxito</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="row sm-justify-around">
-				<div class="sm-12 lg-12"><h2>Cards</h2></div>
-				<div class="column sm-12 md-4 card">
-					<img src="http://via.placeholder.com/1200x900" alt="">
-					<h2>Title Image</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veritatis doloremque, quisquam, itaque veniam nemo quis hic explicabo rerum, ipsa, animi magnam autem in fugit excepturi obcaecati. Aliquid, velit! Quos.</p>
-					<button class="btn btn-info">Button</button>
-				</div>
-				<div class="column sm-12 md-4 card">
-					<img src="http://via.placeholder.com/1200x900" alt="">
-					<h2>Title Image</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veritatis doloremque, quisquam, itaque veniam nemo quis hic explicabo rerum, ipsa, animi magnam autem in fugit excepturi obcaecati. Aliquid, velit! Quos.</p>
-					<button class="btn btn-info">Button</button>
-				</div>
-				<div class="column sm-12 md-4 card">
-					<img src="http://via.placeholder.com/1200x900" alt="">
-					<h2>Title Image</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt veritatis doloremque, quisquam, itaque veniam nemo quis hic explicabo rerum, ipsa, animi magnam autem in fugit excepturi obcaecati. Aliquid, velit! Quos.</p>
-					<button class="btn btn-info">Button</button>
-				</div>
-			</div>
-		</div>
-
-	</div>
-	-->
 
 	<footer class="sm-mt-2">
 		<h5>create by <a class="profile-twitter" href="https://twitter.com/jhonatandev" target="_blank">@jhonatandev</a> - repositorio <a class="profile-github" href="https://github.com/JhonatanC/frontend-dev" target="_blank">Github</a></h5>

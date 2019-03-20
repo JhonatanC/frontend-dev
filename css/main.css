@@ -8,17 +8,19 @@
 /* Contenedor */
 .container {
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  max-width: 1200px; }
 
 .container-cover {
   position: relative;
   width: 100%; }
 
-/* Fila */
-.row, .row-reverse {
+.flex {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: row; }
+
+.row, .row-reverse {
   position: relative;
   width: 100%; }
 
@@ -45,6 +47,43 @@
 
   .row-reverse {
     flex-direction: column-reverse; }
+
+  /*distrubuir tama├▒o */
+  .sm-f-grow-1 {
+    flex-grow: 1; }
+
+  .sm-f-grow-2 {
+    flex-grow: 2; }
+
+  .sm-f-grow-3 {
+    flex-grow: 3; }
+
+  .sm-f-grow-4 {
+    flex-grow: 4; }
+
+  .sm-f-grow-5 {
+    flex-grow: 5; }
+
+  .sm-f-grow-6 {
+    flex-grow: 6; }
+
+  .sm-f-grow-7 {
+    flex-grow: 7; }
+
+  .sm-f-grow-8 {
+    flex-grow: 8; }
+
+  .sm-f-grow-9 {
+    flex-grow: 9; }
+
+  .sm-f-grow-10 {
+    flex-grow: 10; }
+
+  .sm-f-grow-11 {
+    flex-grow: 11; }
+
+  .sm-f-grow-12 {
+    flex-grow: 12; }
 
   /*Tama├▒o de columnas */
   .sm-1 {
@@ -83,6 +122,7 @@
   .sm-12 {
     width: 100%; }
 
+  /* Ordenar elementos */
   .sm-order-1 {
     order: 1; }
 
@@ -145,7 +185,7 @@
   .sm-align-end {
     align-items: flex-end; } }
 /*Medida columnas para tablet - md */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .container {
     width: 95%; }
 
@@ -154,6 +194,42 @@
 
   .row-reverse {
     flex-direction: row-reverse; }
+
+  .md-f-grow-1 {
+    flex-grow: 1; }
+
+  .md-f-grow-2 {
+    flex-grow: 2; }
+
+  .md-f-grow-3 {
+    flex-grow: 3; }
+
+  .md-f-grow-4 {
+    flex-grow: 4; }
+
+  .md-f-grow-5 {
+    flex-grow: 5; }
+
+  .md-f-grow-6 {
+    flex-grow: 6; }
+
+  .md-f-grow-7 {
+    flex-grow: 7; }
+
+  .md-f-grow-8 {
+    flex-grow: 8; }
+
+  .md-f-grow-9 {
+    flex-grow: 9; }
+
+  .md-f-grow-10 {
+    flex-grow: 10; }
+
+  .md-f-grow-11 {
+    flex-grow: 11; }
+
+  .md-f-grow-12 {
+    flex-grow: 12; }
 
   /*Tama├▒o de columnas */
   .md-1 {
@@ -244,7 +320,7 @@
   .md-justify-around {
     justify-content: space-around; } }
 /*Medida columnas para escritorios - lg */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .container {
     width: 75%; }
 
@@ -252,6 +328,42 @@
     flex-direction: row; }
 
   /*Tama├▒o de columnas */
+  .lg-f-grow-1 {
+    flex-grow: 1; }
+
+  .lg-f-grow-2 {
+    flex-grow: 2; }
+
+  .lg-f-grow-3 {
+    flex-grow: 3; }
+
+  .lg-f-grow-4 {
+    flex-grow: 4; }
+
+  .lg-f-grow-5 {
+    flex-grow: 5; }
+
+  .lg-f-grow-6 {
+    flex-grow: 6; }
+
+  .lg-f-grow-7 {
+    flex-grow: 7; }
+
+  .lg-f-grow-8 {
+    flex-grow: 8; }
+
+  .lg-f-grow-9 {
+    flex-grow: 9; }
+
+  .lg-f-grow-10 {
+    flex-grow: 10; }
+
+  .lg-f-grow-11 {
+    flex-grow: 11; }
+
+  .lg-f-grow-12 {
+    flex-grow: 12; }
+
   .lg-1 {
     width: 8.33333%; }
 
@@ -339,26 +451,26 @@
 
   .lg-justify-around {
     justify-content: space-around; } }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .sm-hidde {
     display: none; }
 
   .sm-show {
     display: block !important; } }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .md-hidde {
     display: none; }
 
   .md-show {
     display: block !important; } }
 /* Ocultando bloques de desktop a m├│viles */
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 769px) {
   .sm-only-hidde {
     display: none; }
 
   .sm-only-show {
     display: block !important; } }
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1025px) {
   .md-only-hidde {
     display: none; }
 
@@ -386,7 +498,7 @@
   border: 1px solid rgba(52, 152, 219, 0.2);
   color: #2980b9; }
 
-.alert-success {
+.alert-success-j {
   background: rgba(46, 204, 113, 0.2);
   border: 1px solid rgba(46, 204, 113, 0.2);
   color: #27ae60; }
@@ -729,6 +841,9 @@ table tbody td {
   padding: 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box; }
+
+*:before, *:after {
+  box-sizing: inherit; }
 
 html, body {
   background: #fbfbfb;
