@@ -11,11 +11,9 @@
 	display: flex
 	flex-wrap: wrap
 	flex-direction: row
-.row,
-.row-reverse
+.row
 	position: relative
 	width: 100%
-
 .row-reverse
 	flex-direction: row-reverse
 
@@ -30,89 +28,51 @@
 /*Clase pendiente para revisar las altuas en diferentes contenedores*/
 /*.col-sibling*/
 
-/*Medida columnas para smartphone - sm*/
-@media screen and (min-width: 0px)
-	.container
-		width: 95%
+$w-sm: 0px
+$w-md: 768px
+$w-lg: 1024px
+
+/*Medida para móviles*/
+@mixin smartphone
+	@media (min-width: $w-sm)
+		@content
+
+// Pruebas para mejorar el
+@include smartphone
 	.row
 		flex-direction: column
-	.row-reverse
-		flex-direction: column-reverse
-	/*distrubuir tamaño*/
-	.sm-f-grow-1
-		flex-grow: 1
-	.sm-f-grow-2
-		flex-grow: 2
-	.sm-f-grow-3
-		flex-grow: 3
-	.sm-f-grow-4
-		flex-grow: 4
-	.sm-f-grow-5
-		flex-grow: 5
-	.sm-f-grow-6
-		flex-grow: 6
-	.sm-f-grow-7
-		flex-grow: 7
-	.sm-f-grow-8
-		flex-grow: 8
-	.sm-f-grow-9
-		flex-grow: 9
-	.sm-f-grow-10
-		flex-grow: 10
-	.sm-f-grow-11
-		flex-grow: 11
-	.sm-f-grow-12
-		flex-grow: 12
-	/*Tamaño de columnas*/
-	.sm-1
-		width: 8.333333333333333%
-	.sm-2
-		width: 16.66666666666667%
-	.sm-3
-		width: 25%
-	.sm-4
-		width: 33.33333333333333%
-	.sm-5
-		width: 41.66666666666667%
-	.sm-6
-		width: 50%
-	.sm-7
-		width: 58.33333333333333%
-	.sm-8
-		width: 66.66666666666666%
-	.sm-9
-		width: 75%
-	.sm-10
-		width: 83.33333333333333%
-	.sm-11
-		width: 91.66666666666666%
-	.sm-12
-		width: 100%
-	/* Ordenar elementos */
-	.sm-order-1
-		order: 1
-	.sm-order-2
-		order: 2
-	.sm-order-3
-		order: 3
-	.sm-order-4
-		order: 4
-	.sm-order-5
-		order: 5
-	.sm-order-6
-		order: 6
-	.sm-order-7
-		order: 7
-	.sm-order-8
-		order: 8
-	.sm-order-9
-		order: 9
-	.sm-order-10
-		order: 10
-	.sm-order-11
-		order: 11
-	.sm-order-12
-		order: 12
+	.container
+		width: 95%
+	@for $i from 1 through 12
+		.sm-col-#{$i}
+			width: ((100% / 12) * $i)
+	@for $i from 1 through 12
+		.sm-fg-#{$i}
+			flex-grow: $i
+	@for $i from 1 through 12
+		.sm-push-#{$i}
+			margin-left: ((100% / 12) * $i)
+	@for $i from 1 through 12
+		.sm-order-#{$i}
+			order: $i
+
+/*Medida para tablets*/
+@mixin tablets
+	@media (max-width: $w-md + 1)
+		@content
+
+/*Medida para desktop*/
+@mixin desktop
+	@media (max-width: $w-lg + 1)
+		@content
+
+
+
+
+/*Medida columnas para smartphone - sm*/
+@media screen and (min-width: 0px)
+
+
 	/*Justificar contenido*/
 	.sm-justify-start
 		justify-content: flex-start
@@ -125,15 +85,735 @@
 	.sm-justify-around
 		justify-content: space-around
 	/*Alineando items*/
-	.sm-align-center
+	.sm-items-center
 		align-items: center
-	.sm-align-start
+	.sm-items-start
 		align-items: flex-start
-	.sm-align-end
+	.sm-items-end
 		align-items: flex-end
-
-/*Medida columnas para tablet - md*/
-@media screen and (min-width: 769px)
+	/*Alineando contents*/
+	.sm-content-center
+		align-content: center
+	.sm-content-start
+		align-content: flex-start
+	.sm-content-end
+		align-content: flex-end
+	/*Margin top para columnas*/
+	.sm-mt-0-5
+		margin-top: 0.5em
+	.sm-mt-1
+		margin-top: 1em
+	.sm-mt-1-5
+		margin-top: 1.5em
+	.sm-mt-2
+		margin-top: 2em
+	.sm-mt-2-5
+		margin-top: 2.5em
+	.sm-mt-3
+		margin-top: 3em
+	.sm-mt-3-5
+		margin-top: 3.5em
+	.sm-mt-4
+		margin-top: 4em
+	.sm-mt-4-5
+		margin-top: 4.5em
+	.sm-mt-5
+		margin-top: 5em
+	.sm-mt-5-5
+		margin-top: 5.5em
+	.sm-mt-6
+		margin-top: 6em
+	.sm-mt-6-5
+		margin-top: 6.5em
+	.sm-mt-7
+		margin-top: 7em
+	.sm-mt-7-5
+		margin-top: 7.5em
+	.sm-mt-8
+		margin-top: 8em
+	.sm-mt-8-5
+		margin-top: 8.5em
+	.sm-mt-9
+		margin-top: 9em
+	.sm-mt-9-5
+		margin-top: 9.5em
+	.sm-mt-10
+		margin-top: 10em
+	.sm-mt-10-5
+		margin-top: 10.5em
+	.sm-mt-11
+		margin-top: 11em
+	.sm-mt-11-5
+		margin-top: 11.5em
+	.sm-mt-12
+		margin-top: 12em
+	.sm-mt-12-5
+		margin-top: 12.5em
+	/*Margin bottom para columnas*/
+	.sm-mb-0-5
+		margin-bottom: 0.5em
+	.sm-mb-1
+		margin-bottom: 1em
+	.sm-mb-1-5
+		margin-bottom: 1.5em
+	.sm-mb-2
+		margin-bottom: 2em
+	.sm-mb-2-5
+		margin-bottom: 2.5em
+	.sm-mb-3
+		margin-bottom: 3em
+	.sm-mb-3-5
+		margin-bottom: 3.5em
+	.sm-mb-4
+		margin-bottom: 4em
+	.sm-mb-4-5
+		margin-bottom: 4.5em
+	.sm-mb-5
+		margin-bottom: 5em
+	.sm-mb-5-5
+		margin-bottom: 5.5em
+	.sm-mb-6
+		margin-bottom: 6em
+	.sm-mb-6-5
+		margin-bottom: 6.5em
+	.sm-mb-7
+		margin-bottom: 7em
+	.sm-mb-7-5
+		margin-bottom: 7.5em
+	.sm-mb-8
+		margin-bottom: 8em
+	.sm-mb-8-5
+		margin-bottom: 8.5em
+	.sm-mb-9
+		margin-bottom: 9em
+	.sm-mb-9-5
+		margin-bottom: 9.5em
+	.sm-mb-10
+		margin-bottom: 10em
+	.sm-mb-10-5
+		margin-bottom: 10.5em
+	.sm-mb-11
+		margin-bottom: 11em
+	.sm-mb-11-5
+		margin-bottom: 11.5em
+	.sm-mb-12
+		margin-bottom: 12em
+	.sm-mb-12-5
+		margin-bottom: 12.5em
+	/*Margin left para columnas*/
+	.sm-ml-0-5
+		margin-left: 0.5em
+	.sm-ml-1
+		margin-left: 1em
+	.sm-ml-1-5
+		margin-left: 1.5em
+	.sm-ml-2
+		margin-left: 2em
+	.sm-ml-2-5
+		margin-left: 2.5em
+	.sm-ml-3
+		margin-left: 3em
+	.sm-ml-3-5
+		margin-left: 3.5em
+	.sm-ml-4
+		margin-left: 4em
+	.sm-ml-4-5
+		margin-left: 4.5em
+	.sm-ml-5
+		margin-left: 5em
+	.sm-ml-5-5
+		margin-left: 5.5em
+	.sm-ml-6
+		margin-left: 6em
+	.sm-ml-6-5
+		margin-left: 6.5em
+	.sm-ml-7
+		margin-left: 7em
+	.sm-ml-7-5
+		margin-left: 7.5em
+	.sm-ml-8
+		margin-left: 8em
+	.sm-ml-8-5
+		margin-left: 8.5em
+	.sm-ml-9
+		margin-left: 9em
+	.sm-ml-9-5
+		margin-left: 9.5em
+	.sm-ml-10
+		margin-left: 10em
+	.sm-ml-10-5
+		margin-left: 10.5em
+	.sm-ml-11
+		margin-left: 11em
+	.sm-ml-11-5
+		margin-left: 11.5em
+	.sm-ml-12
+		margin-left: 12em
+	.sm-ml-12-5
+		margin-left: 12.5em
+	/*Margin right para columnas*/
+	.sm-mr-0-5
+		margin-right: 0.5em
+	.sm-mr-1
+		margin-right: 1em
+	.sm-mr-1-5
+		margin-right: 1.5em
+	.sm-mr-2
+		margin-right: 2em
+	.sm-mr-2-5
+		margin-right: 2.5em
+	.sm-mr-3
+		margin-right: 3em
+	.sm-mr-3-5
+		margin-right: 3.5em
+	.sm-mr-4
+		margin-right: 4em
+	.sm-mr-4-5
+		margin-right: 4.5em
+	.sm-mr-5
+		margin-right: 5em
+	.sm-mr-5-5
+		margin-right: 5.5em
+	.sm-mr-6
+		margin-right: 6em
+	.sm-mr-6-5
+		margin-right: 6.5em
+	.sm-mr-7
+		margin-right: 7em
+	.sm-mr-7-5
+		margin-right: 7.5em
+	.sm-mr-8
+		margin-right: 8em
+	.sm-mr-8-5
+		margin-right: 8.5em
+	.sm-mr-9
+		margin-right: 9em
+	.sm-mr-9-5
+		margin-right: 9.5em
+	.sm-mr-10
+		margin-right: 10em
+	.sm-mr-10-5
+		margin-right: 10.5em
+	.sm-mr-11
+		margin-right: 11em
+	.sm-mr-11-5
+		margin-right: 11.5em
+	.sm-mr-12
+		margin-right: 12em
+	.sm-mr-12-5
+		margin-right: 12.5em
+	/*Margin top - bottom para columnas*/
+	.sm-mtb-0-5
+		margin: 0.5em 0
+	.sm-mtb-1
+		margin: 1em 0
+	.sm-mtb-1-5
+		margin: 1.5em 0
+	.sm-mtb-2
+		margin: 2em 0
+	.sm-mtb-2-5
+		margin: 2.5em 0
+	.sm-mtb-3
+		margin: 3em 0
+	.sm-mtb-3-5
+		margin: 3.5em 0
+	.sm-mtb-4
+		margin: 4em 0
+	.sm-mtb-4-5
+		margin: 4.5em 0
+	.sm-mtb-5
+		margin: 5em 0
+	.sm-mtb-5-5
+		margin: 5.5em 0
+	.sm-mtb-6
+		margin: 6em 0
+	.sm-mtb-6-5
+		margin: 6.5em 0
+	.sm-mtb-7
+		margin: 7em 0
+	.sm-mtb-7-5
+		margin: 7.5em 0
+	.sm-mtb-8
+		margin: 8em 0
+	.sm-mtb-8-5
+		margin: 8.5em 0
+	.sm-mtb-9
+		margin: 9em 0
+	.sm-mtb-9-5
+		margin: 9.5em 0
+	.sm-mtb-10
+		margin: 10em 0
+	.sm-mtb-10-5
+		margin: 10.5em 0
+	.sm-mtb-11
+		margin: 11em 0
+	.sm-mtb-11-5
+		margin: 11.5em 0
+	.sm-mtb-12
+		margin: 12em 0
+	.sm-mtb-12-5
+		margin: 12.5em 0
+	/*Margin left - right para columnas*/
+	.sm-mlr-0-5
+		margin: 0 0.5em
+	.sm-mlr-1
+		margin: 0 1em
+	.sm-mlr-1-5
+		margin: 0 1.5em
+	.sm-mlr-2
+		margin: 0 2em
+	.sm-mlr-2-5
+		margin: 0 2.5em
+	.sm-mlr-3
+		margin: 0 3em
+	.sm-mlr-3-5
+		margin: 0 3.5em
+	.sm-mlr-4
+		margin: 0 4em
+	.sm-mlr-4-5
+		margin: 0 4.5em
+	.sm-mlr-5
+		margin: 0 5em
+	.sm-mlr-5-5
+		margin: 0 5.5em
+	.sm-mlr-6
+		margin: 0 6em
+	.sm-mlr-6-5
+		margin: 0 6.5em
+	.sm-mlr-7
+		margin: 0 7em
+	.sm-mlr-7-5
+		margin: 0 7.5em
+	.sm-mlr-8
+		margin: 0 8em
+	.sm-mlr-8-5
+		margin: 0 8.5em
+	.sm-mlr-9
+		margin: 0 9em
+	.sm-mlr-9-5
+		margin: 0 9.5em
+	.sm-mlr-10
+		margin: 0 10em
+	.sm-mlr-10-5
+		margin: 0 10.5em
+	.sm-mlr-11
+		margin: 0 11em
+	.sm-mlr-11-5
+		margin: 0 11.5em
+	.sm-mlr-12
+		margin: 0 12em
+	.sm-mlr-12-5
+		margin: 0 12.5em
+	/*Margin top- bottom - left - right para columnas*/
+	.sm-m-all-0-5
+		margin: 0.5em
+	.sm-m-all-1
+		margin: 1em
+	.sm-m-all-1-5
+		margin: 1.5em
+	.sm-m-all-2
+		margin: 2em
+	.sm-m-all-2-5
+		margin: 2.5em
+	.sm-m-all-3
+		margin: 3em
+	.sm-m-all-3-5
+		margin: 3.5em
+	.sm-m-all-4
+		margin: 4em
+	.sm-m-all-4-5
+		margin: 4.5em
+	.sm-m-all-5
+		margin: 5em
+	.sm-m-all-5-5
+		margin: 5.5em
+	.sm-m-all-6
+		margin: 6em
+	.sm-m-all-6-5
+		margin: 6.5em
+	.sm-m-all-7
+		margin: 7em
+	.sm-m-all-7-5
+		margin: 7.5em
+	.sm-m-all-8
+		margin: 8em
+	.sm-m-all-8-5
+		margin: 8.5em
+	.sm-m-all-9
+		margin: 9em
+	.sm-m-all-9-5
+		margin: 9.5em
+	.sm-m-all-10
+		margin: 10em
+	.sm-m-all-10-5
+		margin: 10.5em
+	.sm-m-all-11
+		margin: 11em
+	.sm-m-all-11-5
+		margin: 11.5em
+	.sm-m-all-12
+		margin: 12em
+	.sm-m-all-12-5
+		margin: 12.5em
+	/*Padding top para columnas*/
+	.sm-pt-0-5
+		padding-top: 0.5em
+	.sm-pt-1
+		padding-top: 1em
+	.sm-pt-1-5
+		padding-top: 1.5em
+	.sm-pt-2
+		padding-top: 2em
+	.sm-pt-2-5
+		padding-top: 2.5em
+	.sm-pt-3
+		padding-top: 3em
+	.sm-pt-3-5
+		padding-top: 3.5em
+	.sm-pt-4
+		padding-top: 4em
+	.sm-pt-4-5
+		padding-top: 4.5em
+	.sm-pt-5
+		padding-top: 5em
+	.sm-pt-5-5
+		padding-top: 5.5em
+	.sm-pt-6
+		padding-top: 6em
+	.sm-pt-6-5
+		padding-top: 6.5em
+	.sm-pt-7
+		padding-top: 7em
+	.sm-pt-7-5
+		padding-top: 7.5em
+	.sm-pt-8
+		padding-top: 8em
+	.sm-pt-8-5
+		padding-top: 8.5em
+	.sm-pt-9
+		padding-top: 9em
+	.sm-pt-9-5
+		padding-top: 9.5em
+	.sm-pt-10
+		padding-top: 10em
+	.sm-pt-10-5
+		padding-top: 10.5em
+	.sm-pt-11
+		padding-top: 11em
+	.sm-pt-11-5
+		padding-top: 11.5em
+	.sm-pt-12
+		padding-top: 12em
+	.sm-pt-12-5
+		padding-top: 12.5em
+	/*Padding bottom para columnas*/
+	.sm-pb-0-5
+		padding-bottom: 0.5em
+	.sm-pb-1
+		padding-bottom: 1em
+	.sm-pb-1-5
+		padding-bottom: 1.5em
+	.sm-pb-2
+		padding-bottom: 2em
+	.sm-pb-2-5
+		padding-bottom: 2.5em
+	.sm-pb-3
+		padding-bottom: 3em
+	.sm-pb-3-5
+		padding-bottom: 3.5em
+	.sm-pb-4
+		padding-bottom: 4em
+	.sm-pb-4-5
+		padding-bottom: 4.5em
+	.sm-pb-5
+		padding-bottom: 5em
+	.sm-pb-5-5
+		padding-bottom: 5.5em
+	.sm-pb-6
+		padding-bottom: 6em
+	.sm-pb-6-5
+		padding-bottom: 6.5em
+	.sm-pb-7
+		padding-bottom: 7em
+	.sm-pb-7-5
+		padding-bottom: 7.5em
+	.sm-pb-8
+		padding-bottom: 8em
+	.sm-pb-8-5
+		padding-bottom: 8.5em
+	.sm-pb-9
+		padding-bottom: 9em
+	.sm-pb-9-5
+		padding-bottom: 9.5em
+	.sm-pb-10
+		padding-bottom: 10em
+	.sm-pb-10-5
+		padding-bottom: 10.5em
+	.sm-pb-11
+		padding-bottom: 11em
+	.sm-pb-11-5
+		padding-bottom: 11.5em
+	.sm-pb-12
+		padding-bottom: 12em
+	.sm-pb-12-5
+		padding-bottom: 12.5em
+	/*Padding left para columnas*/
+	.sm-pl-0-5
+		padding-left: 0.5em
+	.sm-pl-1
+		padding-left: 1em
+	.sm-pl-1-5
+		padding-left: 1.5em
+	.sm-pl-2
+		padding-left: 2em
+	.sm-pl-2-5
+		padding-left: 2.5em
+	.sm-pl-3
+		padding-left: 3em
+	.sm-pl-3-5
+		padding-left: 3.5em
+	.sm-pl-4
+		padding-left: 4em
+	.sm-pl-4-5
+		padding-left: 4.5em
+	.sm-pl-5
+		padding-left: 5em
+	.sm-pl-5-5
+		padding-left: 5.5em
+	.sm-pl-6
+		padding-left: 6em
+	.sm-pl-6-5
+		padding-left: 6.5em
+	.sm-pl-7
+		padding-left: 7em
+	.sm-pl-7-5
+		padding-left: 7.5em
+	.sm-pl-8
+		padding-left: 8em
+	.sm-pl-8-5
+		padding-left: 8.5em
+	.sm-pl-9
+		padding-left: 9em
+	.sm-pl-9-5
+		padding-left: 9.5em
+	.sm-pl-10
+		padding-left: 10em
+	.sm-pl-10-5
+		padding-left: 10.5em
+	.sm-pl-11
+		padding-left: 11em
+	.sm-pl-11-5
+		padding-left: 11.5em
+	.sm-pl-12
+		padding-left: 12em
+	.sm-pl-12-5
+		padding-left: 12.5em
+	/*Padding right para columnas*/
+	.sm-pr-0-5
+		padding-right: 0.5em
+	.sm-pr-1
+		padding-right: 1em
+	.sm-pr-1-5
+		padding-right: 1.5em
+	.sm-pr-2
+		padding-right: 2em
+	.sm-pr-2-5
+		padding-right: 2.5em
+	.sm-pr-3
+		padding-right: 3em
+	.sm-pr-3-5
+		padding-right: 3.5em
+	.sm-pr-4
+		padding-right: 4em
+	.sm-pr-4-5
+		padding-right: 4.5em
+	.sm-pr-5
+		padding-right: 5em
+	.sm-pr-5-5
+		padding-right: 5.5em
+	.sm-pr-6
+		padding-right: 6em
+	.sm-pr-6-5
+		padding-right: 6.5em
+	.sm-pr-7
+		padding-right: 7em
+	.sm-pr-7-5
+		padding-right: 7.5em
+	.sm-pr-8
+		padding-right: 8em
+	.sm-pr-8-5
+		padding-right: 8.5em
+	.sm-pr-9
+		padding-right: 9em
+	.sm-pr-9-5
+		padding-right: 9.5em
+	.sm-pr-10
+		padding-right: 10em
+	.sm-pr-10-5
+		padding-right: 10.5em
+	.sm-pr-11
+		padding-right: 11em
+	.sm-pr-11-5
+		padding-right: 11.5em
+	.sm-pr-12
+		padding-right: 12em
+	.sm-pr-12-5
+		padding-right: 12.5em
+	/*Padding top - bottom para columnas*/
+	.sm-ptb-0-5
+		padding: 0.5em 0
+	.sm-ptb-1
+		padding: 1em 0
+	.sm-ptb-1-5
+		padding: 1.5em 0
+	.sm-ptb-2
+		padding: 2em 0
+	.sm-ptb-2-5
+		padding: 2.5em 0
+	.sm-ptb-3
+		padding: 3em 0
+	.sm-ptb-3-5
+		padding: 3.5em 0
+	.sm-ptb-4
+		padding: 4em 0
+	.sm-ptb-4-5
+		padding: 4.5em 0
+	.sm-ptb-5
+		padding: 5em 0
+	.sm-ptb-5-5
+		padding: 5.5em 0
+	.sm-ptb-6
+		padding: 6em 0
+	.sm-ptb-6-5
+		padding: 6.5em 0
+	.sm-ptb-7
+		padding: 7em 0
+	.sm-ptb-7-5
+		padding: 7.5em 0
+	.sm-ptb-8
+		padding: 8em 0
+	.sm-ptb-8-5
+		padding: 8.5em 0
+	.sm-ptb-9
+		padding: 9em 0
+	.sm-ptb-9-5
+		padding: 9.5em 0
+	.sm-ptb-10
+		padding: 10em 0
+	.sm-ptb-10-5
+		padding: 10.5em 0
+	.sm-ptb-11
+		padding: 11em 0
+	.sm-ptb-11-5
+		padding: 11.5em 0
+	.sm-ptb-12
+		padding: 12em 0
+	.sm-ptb-12-5
+		padding: 12.5em 0
+	/*Padding left - right para columnas*/
+	.sm-plr-0-5
+		padding: 0 0.5em
+	.sm-plr-1
+		padding: 0 1em
+	.sm-plr-1-5
+		padding: 0 1.5em
+	.sm-plr-2
+		padding: 0 2em
+	.sm-plr-2-5
+		padding: 0 2.5em
+	.sm-plr-3
+		padding: 0 3em
+	.sm-plr-3-5
+		padding: 0 3.5em
+	.sm-plr-4
+		padding: 0 4em
+	.sm-plr-4-5
+		padding: 0 4.5em
+	.sm-plr-5
+		padding: 0 5em
+	.sm-plr-5-5
+		padding: 0 5.5em
+	.sm-plr-6
+		padding: 0 6em
+	.sm-plr-6-5
+		padding: 0 6.5em
+	.sm-plr-7
+		padding: 0 7em
+	.sm-plr-7-5
+		padding: 0 7.5em
+	.sm-plr-8
+		padding: 0 8em
+	.sm-plr-8-5
+		padding: 0 8.5em
+	.sm-plr-9
+		padding: 0 9em
+	.sm-plr-9-5
+		padding: 0 9.5em
+	.sm-plr-10
+		padding: 0 10em
+	.sm-plr-10-5
+		padding: 0 10.5em
+	.sm-plr-11
+		padding: 0 11em
+	.sm-plr-11-5
+		padding: 0 11.5em
+	.sm-plr-12
+		padding: 0 12em
+	.sm-plr-12-5
+		padding: 0 12.5em
+	/*Padding top- bottom - left - right para columnas*/
+	.sm-p-all-0-5
+		margin: 0.5em
+	.sm-p-all-1
+		margin: 1em
+	.sm-p-all-1-5
+		margin: 1.5em
+	.sm-p-all-2
+		margin: 2em
+	.sm-p-all-2-5
+		margin: 2.5em
+	.sm-p-all-3
+		margin: 3em
+	.sm-p-all-3-5
+		margin: 3.5em
+	.sm-p-all-4
+		margin: 4em
+	.sm-p-all-4-5
+		margin: 4.5em
+	.sm-p-all-5
+		margin: 5em
+	.sm-p-all-5-5
+		margin: 5.5em
+	.sm-p-all-6
+		margin: 6em
+	.sm-p-all-6-5
+		margin: 6.5em
+	.sm-p-all-7
+		margin: 7em
+	.sm-p-all-7-5
+		margin: 7.5em
+	.sm-p-all-8
+		margin: 8em
+	.sm-p-all-8-5
+		margin: 8.5em
+	.sm-p-all-9
+		margin: 9em
+	.sm-p-all-9-5
+		margin: 9.5em
+	.sm-p-all-10
+		margin: 10em
+	.sm-p-all-10-5
+		margin: 10.5em
+	.sm-p-all-11
+		margin: 11em
+	.sm-p-all-11-5
+		margin: 11.5em
+	.sm-p-all-12
+		margin: 12em
+	.sm-p-all-12-5
+		margin: 12.5em
+/* Medida columnas para tablet - md */
+@media screen and (max-width: 769px)
 	.container
 		width: 95%
 	.row
@@ -189,6 +869,31 @@
 		width: 91.66666666666666%
 	.md-12
 		width: 100%
+	/*Empujar columas*/
+	.md-push-1
+		margin-left: 8.333333333333333%
+	.md-push-2
+		margin-left: 16.66666666666667%
+	.md-push-3
+		margin-left: 25%
+	.md-push-4
+		margin-left: 33.33333333333333%
+	.md-push-5
+		margin-left: 41.66666666666667%
+	.md-push-6
+		margin-left: 50%
+	.md-push-7
+		margin-left: 58.33333333333333%
+	.md-push-8
+		margin-left: 66.66666666666666%
+	.md-push-9
+		margin-left: 75%
+	.md-push-10
+		margin-left: 83.33333333333333%
+	.md-push-11
+		margin-left: 91.66666666666666%
+	.md-push-12
+		margin-left: 100%
 	.md-order-1
 		order: 1
 	.md-order-2
@@ -226,7 +931,7 @@
 		justify-content: space-around
 
 /*Medida columnas para escritorios - lg*/
-@media screen and (min-width: 1025px)
+@media screen and (max-width: 1025px)
 	.container
 		width: 75%
 	.row
@@ -340,4 +1045,3 @@
 		display: none
 	.md-only-show
 		display: block !important
-
